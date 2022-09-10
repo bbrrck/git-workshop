@@ -187,9 +187,18 @@ git merge dog
 ```
 
 ## Riešenie *merge* konfliktov
+```sh
+git merge cat
+# (!)
+# konflikt v animals.py:
+# zmeny z oboch vetiev musia byť 
+# zlúčené manuálne (napr. vo VS Code)
 
-
-
+# pridaj zmeny do ďalšej verzie
+git add animals.py
+# ulož novú verziu su zlúčenými zmenami
+git commit -m "merged dog and cat features"
+```
 
 # Vzdialené repozitáre *(remote)*
 
@@ -212,8 +221,10 @@ To https://github.com/bbrrck/test-repo-01.git
 branch 'main' set up to track 'origin/main'.
 ```
 
-## Klonovanie existujúceho *remote*
-
+## Klonovanie existujúceho *remote* repozitára
+```sh
+git clone https://github.com/bbrrck/animals.git
+```
 
 # Užitočné zdroje
 
@@ -221,11 +232,17 @@ branch 'main' set up to track 'origin/main'.
 - [Oficiálna stránka](https://git-scm.com) a [dokumentácia](https://git-scm.com/doc) Gitu
 - [Pro Git](https://git-scm.com/book/en/v2), voľne dostupná oficiálna kniha, k dispozícii čiastočne aj [v češtine](https://git-scm.com/book/cs/v2)
 
-## Kurzy
-- videokurz v slovenčine od Yablka: [Git a Github od základov](https://www.youtube.com/watch?v=0v5K4GvK4Gs)
-- kurz v slovenčine na FEI TUKE, časti [Systémy pre správu verzií](https://kurzy.kpi.fei.tuke.sk/zsi/labs/02-git.html) a [Práca s vetvami v systéme Git](https://kurzy.kpi.fei.tuke.sk/zsi/labs/03-git.html)
+## Kurzy & tutoriály
+
+### sk
+- videokurz od Yablka: [Git a Github od základov](https://www.youtube.com/watch?v=0v5K4GvK4Gs)
+- predmet *Základy softvérového inžinierstva* na FEI TUKE
+    - cvičenie 2: [Systémy pre správu verzií](https://kurzy.kpi.fei.tuke.sk/zsi/labs/02-git.html)
+    - cvičenie 3: [Práca s vetvami v systéme Git](https://kurzy.kpi.fei.tuke.sk/zsi/labs/03-git.html)
+
+### en
 - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 - Coursera: [Introduction to Git and GitHub](https://www.coursera.org/learn/introduction-git-github/)
 - Missing Semester of CS Education, [Lecture 6: Version Control (git)](https://www.youtube.com/watch?v=2sjqTHE0zok)
-- [Learn how Git works internally with simple diagrams](https://medium.com/@praveenmuth2/learn-how-git-works-internally-with-simple-diagrams-a9349dc32831): článok s diagramami na pochopoenie toho ako fungujú Git príkazy
+- [Learn how Git works internally with simple diagrams](https://medium.com/@praveenmuth2/learn-how-git-works-internally-with-simple-diagrams-a9349dc32831)
 - [Atlassian Git tutorial](https://www.atlassian.com/git/tutorials)
