@@ -23,11 +23,12 @@ format:
             data-background-size: 50%
             data-background-position: bottom
             # footer: "."
+        auto-animate-easing: ease-in-out
+        auto-animate-unmatched: false
+        auto-animate-duration: 0.8
 ---
 
-# Úvod
-
-## O mne
+## O mne <!-- # Úvod -->
 
 :::: {.columns}
 
@@ -62,19 +63,24 @@ format:
 - užitočný pre tímy aj pre jednotlivcov
 - nie je len o kóde, dovoľuje ukladať ľubovoľné súbory
 
+
+## Prečo potrebujeme systémy na správu verzií?
+![](img/how-not-to-name-files.png)
+
+## Prečo potrebujeme systémy na správu verzií?
+![](img/how-not-to-name-files-crossed.png)
+
 ## Čo umožňuje Git?
-- ukladanie verzií
+
+::: {.incremental}
+- ukladať verzie
+- prepínať medzi verziami
 - obnoviť predošlú verziu
 - porovnávať verzie
 - vytvárať vetvy
 - zlučovať vetvy
-- riešiť konflikty
-
-## Prečo potrebujeme Git?
-
-*TODO - traditional approach - save many versions of the same file on disk, keep track of version in the filename*
-
-## Čo je to Github?
+<!-- - riešiť konflikty medzi vetvami -->
+:::
 
 ## Git slovník
 
@@ -108,9 +114,38 @@ format:
 
 :::
 
+## Čo je to Github?
+#### *sociálna sieť pre programátorov*
+- **Git** = systém na správu verzií
+- **Github** = cloudový portál na ukladanie repozitárov
+- používa Git, no nie je jeho súčasťou
+<!-- - portál na ukladanie vzdialených Git repozitárov -->
+- obsahuje funkcionalitu ktorá nie je v Gite
+    - *Issues*
+    - *Pull requests*
+    - *Actions*
+    - ...
+- podobné služby: [Gitlab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), [Azure DevOps](https://dev.azure.com/), 
+<!-- [Google Cloud Source Repositories](https://source.cloud.google.com/onboarding/welcome), -->
+...
+
+## {background-image="img/github-screenshot.png" background-size="contain"}
+
 # Základy Gitu
 
-## Krok 0: PowerShell
+## Krok 0: Pracujeme s konzolou
+
+- aby sme lepšie pochopili ako Git funguje, budeme na začiatku spúšťať Git príkazy cez **konzolu** (terminál)
+- neskôr si ukážeme aj použitie Gitu bez konzoly (napr. vo VS Code)
+- vo Windowse: **PowerShell**
+- dve možnosti ako spustiť PowerShell:
+    a. vyhľadajte "powershell" cez štartové menu 
+    b. stlačte `⊞ Win + R`, do okna napíšte "powershell" a stlačte OK
+    
+::: {.notes}
+- aby sme lepšie pochopili ako Git funguje, budeme na začiatku spúšťať Git príkazy cez konzolu (terminál)
+- neskôr si ukážeme ako sa Git dá používať bez konzoly (mnohé textové editory a IDE majú zabudovanú Git integráciu)
+:::
 
 
 ## Krok 1: Inštalácia Gitu
@@ -130,11 +165,15 @@ scoop install git
 
 Inštrukcie pre **macOS** a **Linux** sú k dispozícii na oficiálnej stránke [v angličtine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) alebo [v češtine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
+## Krok 2: Nastavenie Gitu {auto-animate="true"}
 
-## Krok 2: Nastavenie Gitu
-
+Skontrolujme či je Git správne nainštalovaný:
 ```sh
 git --version
+```
+
+Predtým ako začneme pracovať s Gitom, je potrebné nastaviť si meno a email. Tieto údaje bude Git používať na priradenie autora k verzii:
+```sh
 git config --global user.name "Tibor Stanko"
 git config --global user.email "tibor.stanko@zurich.com"
 ```
@@ -226,6 +265,8 @@ branch 'main' set up to track 'origin/main'.
 git clone https://github.com/bbrrck/animals.git
 ```
 
+# Markdown rýchlokurz
+
 # Užitočné zdroje
 
 ## Dokumentácia
@@ -237,8 +278,8 @@ git clone https://github.com/bbrrck/animals.git
 ### sk
 - videokurz od Yablka: [Git a Github od základov](https://www.youtube.com/watch?v=0v5K4GvK4Gs)
 - predmet *Základy softvérového inžinierstva* na FEI TUKE
-    - cvičenie 2: [Systémy pre správu verzií](https://kurzy.kpi.fei.tuke.sk/zsi/labs/02-git.html)
-    - cvičenie 3: [Práca s vetvami v systéme Git](https://kurzy.kpi.fei.tuke.sk/zsi/labs/03-git.html)
+    - časť 2: [Systémy pre správu verzií](https://kurzy.kpi.fei.tuke.sk/zsi/labs/02-git.html)
+    - časť 3: [Práca s vetvami v systéme Git](https://kurzy.kpi.fei.tuke.sk/zsi/labs/03-git.html)
 
 ### en
 - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
