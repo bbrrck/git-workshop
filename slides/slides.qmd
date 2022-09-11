@@ -368,12 +368,36 @@ git checkout -b slovak # vytvor vetvu 'slovak' a prepni sa na ňu
 ```
 
 ## Zlučovanie vetiev *(merge)*
-::: {.todo}
-:::
-
 ```powershell
 git checkout main
-git merge dog
+git merge slovak
+```
+
+Výstup:
+```markdown
+Auto-merging hello.py
+Merge made by the 'ort' strategy.
+ hello.py | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+ ```
+
+```markdown
+Auto-merging hello.py
+CONFLICT (content): Merge conflict in hello.py
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+```sh
+*   3a5d22e (HEAD -> main) Merge all languages
+|\
+| * 21c7ab7 (french) Add french functionality
+* |   1364948 Merge branch 'slovak'
+|\ \
+| * | c3159a6 (slovak) Add slovak functionality
+| |/
+* / 67e86d0 Fix missing exclamation mark
+|/
+* de1543b Add hello.py
 ```
 
 ## Riešenie *merge* konfliktov
