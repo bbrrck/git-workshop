@@ -9,6 +9,11 @@ $code-block-font-size: 0.8em;
 
 .reveal .slide {
 
+    .todo:after {
+        content: "TODO";
+        color: red;
+    }
+
     div.sourceCode {
         margin: 0.1em 0 0.25em;
     }
