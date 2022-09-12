@@ -1,4 +1,4 @@
-<!-- ```{mermaid}
+```{mermaid}
 %%| fig-width: 10
 %%{
     init: { 
@@ -31,4 +31,4 @@
         checkout main
         merge bugfix
         merge feature
-``` -->
+```

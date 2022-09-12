@@ -1,4 +1,4 @@
-<!-- ```{mermaid}
+```{mermaid}
 %%| fig-width: 10
 %%{
     init: { 
@@ -18,4 +18,4 @@
         commit id:"version 2"
         commit id:"version 3"
         commit id:"version 4"
-``` -->
+```
