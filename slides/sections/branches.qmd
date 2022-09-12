@@ -145,7 +145,7 @@ zirafa
 :::
 3. Ulož novú verziu ktorá bude obsahovať `zoo.txt`
 4. Zlúč zmeny spravené na vetve `animals` do vetvy `main` a vymaž vetvu `animals`
-5. Na novej vetve `tiger` zmeň riadok `lev` na `tiger` a ulož novú verziu.
+5. Na novej vetve `tiger` zmeň riadok `lev` na `tiger` a ulož novú verziu
 6. Prepni sa na vetvu `main`, oprav riadok `zirafa` na `žirafa` a ulož novú verziu
 7. Zlúč zmeny z vetvy `tiger` s vetvou `main`
 :::
