@@ -6,7 +6,7 @@
 
 - Aby sme pochopili ako Git funguje, budeme na začiatku spúšťať Git cez **terminál** 
 - Neskôr si ukážeme aj použitie Gitu priamo v IDE (napr. vo VS Code)
-- Vo **Windowse** odporúčam [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=us) a PowerShell
+- Vo **Windowse** odporúčam [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=us) s [PowerShell](https://docs.microsoft.com/en-us/powershell/) (built-in) alebo [Nushell](https://www.nushell.sh/)
 
 . . .
 
@@ -113,7 +113,7 @@ git commit -m "Add hello.py"
 ::: -->
 
 
-## Krok 4: Uloženie verzie (2)
+## Krok 4: Uloženie verzie
 - Popis záznamu *(commit message)* je väčšinou krátka jednoriadková správa ktorá sa špecifikuje cez argument `-m "commit message"`
 - Ak chceme napísať dlhší popis, argument `-m` vynecháme. `git commit` vtedy otvorí textový editor v ktorom popis napíšeme. 
 - V Gite na Windowse je na písanie *commit message* predvolený editor `vim`, ktorý beží priamo v termináli. Ak nemáte skúsenosti s používaním vimu, môžete si editor zmeniť napr. na `notepad`:
@@ -122,7 +122,7 @@ git config --global core.editor notepad
 ```
 
 
-## Krok 4: Uloženie verzie (3)
+## Krok 4: Uloženie verzie
 <!-- - Je **dôležité** písať dobré *commit messages*!  -->
 Neflákajte písanie *commit messages*! 
 
