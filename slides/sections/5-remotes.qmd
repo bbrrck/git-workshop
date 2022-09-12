@@ -190,3 +190,14 @@ git clone https://github.com/bbrrck/zoo.git myzoo
 # alebo
 git clone https://github.com/bbrrck/zoo.git # naklonuje sa do adresára `zoo`
 ```
+
+
+## Úlohy (3) {.exercise}
+
+::: {.fontsize-090 }
+1. Vytvor si na Githube repo s názvom `zoo`
+1. Pridaj tento *remote* do svojho lokálneho repa
+1. Nahraj lokálnu vetvu `main` na *remote*
+1. Na Githube pridaj do súboru `zoo.txt` za meno každého zvieraťa jeho emoji: 🐼🐘🐯🦒
+1. Zosynchronizuj lokálne repo s Githubom
+:::
