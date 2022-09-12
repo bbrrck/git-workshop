@@ -33,6 +33,6 @@ format:
 {{< include sections/4-branches.qmd >}}
 {{< include sections/5-remotes.qmd >}}
 {{< include sections/6-advanced-git.qmd >}}
-{{< include sections/7-markdown.qmd >}}
+<!-- {{< include sections/7-markdown.qmd >}} -->
 {{< include sections/8-links.qmd >}}
 {{< include sections/9-thanks.qmd >}}
