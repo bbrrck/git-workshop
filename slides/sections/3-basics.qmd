@@ -1,4 +1,4 @@
-# Základy Gitu
+# Základy Gitu {#basics}
 
 {{< include ../diagrams/section-3-basics.qmd >}}
 
@@ -163,12 +163,12 @@ add a section talking about `git diff` and its usage
 :::
 
 
-## Úlohy (1) {.exercise}
+## Úlohy (1) {.exercise #exercise-1-basics}
 
 ::: {.exercise}
 1. Vytvor si na svojom počítači prázdny adresár `zoo`
 1. Sprav z adresára `zoo` Git repozitár
-1. Vytvor v adresári súbor `test.txt` s ľubovoľným obsahom
+1. Vytvor v repozitári súbor `test.txt` s ľubovoľným obsahom
 1. Pridaj `test.txt` do ďalšej verzie a ulož ju
 1. Skontroluj novú verziu cez `git log`
 :::
