@@ -110,8 +110,12 @@ git config --global core.editor notepad
 ## Krok 4: Uloženie verzie (3)
 - Je **dôležité** písať dobré *commit messages*! 
 
-::: {.center .width-080}
+::: {.center .width-060}
 ![](https://imgs.xkcd.com/comics/git_commit_2x.png)
+:::
+
+:::footer
+[xkcd:1296](https://xkcd.com/1296/)
 :::
 
 
@@ -146,3 +150,7 @@ Niektoré systémy na kontrolu verzií fungujú tak že vytvoria novú verziu zo
 1. Vytvor v adresári súbor (napr. `test.txt`) s ľubovoľným obsahom.
 1. Pridaj `test.txt` do ďalšej verzie a ulož ju.
 1. Skontroluj novú verziu cez `git log`.
+
+::: {.fontsize-080}
+**Tip**: nezabudni počas práce používať `git status` na zistenie aktuálneho stavu repozitára.
+:::
