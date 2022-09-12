@@ -1,0 +1,16 @@
+# Pokročilý Git
+
+
+## `git log`
+
+
+## Interaktívne pridávanie zmien
+```powershell
+git add --interactive # alebo `git add -i`
+```
+
+
+## `git blame`
+
+
+## `.gitignore`

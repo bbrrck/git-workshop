@@ -1,0 +1,46 @@
+# Vzdialené repozitáre *(remotes)*
+
+
+## Vytvorenie repozitára na Githube
+::: {.todo}
+:::
+
+
+## Poslanie lokálnej kópie na *remote*
+::: {.todo}
+:::
+
+```powershell
+git push -u origin main
+```
+
+```markdown
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 241 bytes | 120.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/bbrrck/test-repo-01.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+```
+
+
+## Stiahnutie vzdialených zmien do lokálneho repozitára
+::: {.todo}
+:::
+
+```powershell
+git fetch
+git merge
+git pull
+```
+
+
+## Klonovanie existujúceho *remote* repozitára
+
+::: {.todo}
+:::
+
+```powershell
+git clone https://github.com/bbrrck/animals.git
+```

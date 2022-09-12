@@ -1,5 +1,7 @@
-*:Zone.Identifier
+# Quarto artifacts
+**/*_files
+**/*.html
+**/.ipynb
 
-slides/slides_files
-slides/slides.html
-slides/slides.ipynb
+# WSL VS Code
+*:Zone.Identifier
