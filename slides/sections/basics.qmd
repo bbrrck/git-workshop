@@ -4,23 +4,23 @@
 
 ## Krok 0: Pracujeme s terminálom
 
-- Aby sme pochopili ako Git funguje, budeme na začiatku spúšťať Git príkazy cez **terminál** 
+- Aby sme pochopili ako Git funguje, budeme na začiatku spúšťať Git cez **terminál** 
 - Neskôr si ukážeme aj použitie Gitu priamo v IDE (napr. vo VS Code)
 - Vo **Windowse** odporúčam [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=us) a PowerShell
 
 . . .
 
 ::: {.fontsize-080}
-- Základné príkazy na navigáciu v termináli:
+- Základné príkazy na navigáciu medzi adresármi v termináli:
     - `pwd` --- vypíš aktuálny adresár
     - `cd folder` --- zmeň aktuálny adresár na `folder`
 
-```powershell
->> pwd                        # C:\Users\tibor.stanko
->> cd folder                  # C:\Users\tibor.stanko\folder
->> cd ..                      # C:\Users\tibor.stanko
->> cd C:\Users\janko.hrasko\  # C:\Users\janko.hrasko
->> cd ~                       # C:\Users\tibor.stanko
+```sh
+>> pwd                       # C:/Users/tibor.stanko
+>> cd folder                 # C:/Users/tibor.stanko/folder
+>> cd ..                     # C:/Users/tibor.stanko
+>> cd C:/Users/janko.hrasko  # C:/Users/janko.hrasko
+>> cd ~                      # C:/Users/tibor.stanko
 ```
 :::
 
@@ -31,13 +31,11 @@
     - cez [klasický inštalátor](https://git-scm.com/download/win)
     - cez [scoop](https://scoop.sh/) (odporúčam) --- v PowerShell spustite nasledovné príkazy:
 
-::: {.fontsize-080}
-```powershell
+```sh
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh | iex # inštalácia scoopu
 scoop install git # inštalácia gitu
-```
-:::
+````
 
 - Inštrukcie pre **macOS** alebo **Linux** sú na oficiálnej stránke [v angličtine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) aj [v češtine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
@@ -45,18 +43,18 @@ scoop install git # inštalácia gitu
 ## Krok 2: Nastavenie Gitu
 
 - Skontrolujme či je Git správne nainštalovaný:
-```powershell
+```sh
 git --version
 ```
 
 - Predtým ako začneme pracovať s Gitom, je potrebné nastaviť si meno a email cez príkaz `git config`. Tieto údaje bude Git používať na priradenie autora k verzii.
-```powershell
+```sh
 git config --global user.name "Tibor Stanko"
 git config --global user.email "tibor.stanko@zurich.com"
 ```
 
 - Predvolenú vetvu si nastavíme na `main` (o [vetvách](#/vetvy-branches) si povieme viac neskôr)
-```powershell
+```sh
 git config --global init.defaultBranch "main"
 ```
 
@@ -64,18 +62,35 @@ git config --global init.defaultBranch "main"
 ## Krok 3: Vytvorenie Git repozitára
 
 - Prepneme sa do adresára z ktorého chceme spraviť repozitár:
-```powershell
-cd ~\hello
+```sh
+cd ~/hello
 ```
 
 - Príkaz `git init` slúži na vytvorenie Git repozitára v aktuálnom adresári:
-```powershell
+```sh
 git init
 ```
 
 - Po spustení príkazu Git vypíše:
-```markdown
+```changelog
 Initialized empty Git repository in C:/Users/tibor.stanko/hello/.git/
+```
+
+
+## Krok 3: Vytvorenie Git repozitára
+
+- Stav repozitára môžeme skontrolovať cez `git status`:
+```sh
+git status
+```
+
+- Takto vyzerá stav prázdneho Git repozitáru (žiadne súbory ani uložené verzie):
+```changelog
+On branch main
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
 ```
 
 
@@ -84,12 +99,12 @@ Initialized empty Git repository in C:/Users/tibor.stanko/hello/.git/
 Uloženie verzie prebieha v dvoch krokoch.
 
 1. Cez `git add` označíme zmeny ktoré majú byť pridané do novej verzie:
-```powershell
+```sh
 git add hello.py
 ```
 
 2. Cez `git commit` vytvoríme záznam o novej verzii:
-```powershell
+```sh
 git commit -m "Add hello.py"
 ```
 
@@ -102,16 +117,17 @@ git commit -m "Add hello.py"
 - Popis záznamu *(commit message)* je väčšinou krátka jednoriadková správa ktorá sa špecifikuje cez argument `-m "commit message"`
 - Ak chceme napísať dlhší popis, argument `-m` vynecháme. `git commit` vtedy otvorí textový editor v ktorom popis napíšeme. 
 - V Gite na Windowse je na písanie *commit message* predvolený editor `vim`, ktorý beží priamo v termináli. Ak nemáte skúsenosti s používaním vimu, môžete si editor zmeniť napr. na `notepad`:
-```powershell
+```sh
 git config --global core.editor notepad
 ```
 
 
 ## Krok 4: Uloženie verzie (3)
-- Je **dôležité** písať dobré *commit messages*! 
+<!-- - Je **dôležité** písať dobré *commit messages*!  -->
+Neflákajte písanie *commit messages*! 
 
 ::: {.center .width-060}
-![](https://imgs.xkcd.com/comics/git_commit_2x.png)
+![](img/git_commit_2x.png)
 :::
 
 :::footer
@@ -121,16 +137,14 @@ git config --global core.editor notepad
 
 ## Krok 5: Kontrola stavu repozitára
 
-- Aktuálny stav repozitára môžeme skontrolovať cez `git status` 
-```powershell
->> git status  # prípadne `git status -s` pre skrátený výpis
+- Aktuálny stav repozitára môžeme skontrolovať cez `git status`:
+```changelog
 On branch main
 nothing to commit, working tree clean
 ```
 
-- Cez príkaz `git log` sa môžeme presvedčiť o tom že záznam bol vytvorený:
-```js
->> git log
+- Cez príkaz `git log` sa môžeme presvedčiť o tom že záznam *(commit)* bol vytvorený:
+```zsh
 commit bf5c9b4a320012b422546fcb86f5b957104bea55 (HEAD -> main)
 Author: Tibor Stanko <tibor.stanko@gmail.com>
 Date:   Tue Sep 13 17:00:00 2022 +0200
@@ -144,12 +158,15 @@ Niektoré systémy na kontrolu verzií fungujú tak že vytvoria novú verziu zo
 :::
 
 
-## Úlohy (1)
-1. Vytvor si na svojom počítači prázdny adresár, napr. `git-workshop`.
-1. Sprav z adresára `git-workshop` Git repozitár.
-1. Vytvor v adresári súbor (napr. `test.txt`) s ľubovoľným obsahom.
-1. Pridaj `test.txt` do ďalšej verzie a ulož ju.
-1. Skontroluj novú verziu cez `git log`.
+## Úlohy (1) {.exercise}
+
+::: {.exercise}
+1. Vytvor si na svojom počítači prázdny adresár, napr. `git-workshop`
+1. Sprav z adresára `git-workshop` Git repozitár
+1. Vytvor v adresári súbor (napr. `test.txt`) s ľubovoľným obsahom
+1. Pridaj `test.txt` do ďalšej verzie a ulož ju
+1. Skontroluj novú verziu cez `git log`
+:::
 
 ::: {.fontsize-080}
 **Tip**: nezabudni počas práce používať `git status` na zistenie aktuálneho stavu repozitára.
