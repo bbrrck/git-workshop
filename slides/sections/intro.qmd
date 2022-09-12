@@ -21,4 +21,4 @@
 
 ## O tomto workshope
 
-## Anketa!
+<!-- ## Anketa -->

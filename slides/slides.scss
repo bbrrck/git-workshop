@@ -36,6 +36,11 @@ $code-block-font-size: 0.8em;
         .date {
             font-style: italic;
         }
+
+        .footer {
+            display: none;
+
+        }
     }
 
     .slide {
@@ -89,6 +94,10 @@ $code-block-font-size: 0.8em;
 
         .fontsize-090 {
             font-size: 90%;
+        }
+
+        .center {
+            text-align: center;
         }
     }
 }
