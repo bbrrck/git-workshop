@@ -23,6 +23,8 @@ format:
         toc-depth: 1
         toc-title: "Obsah"
         toc: true
+        # transition: fade
+        # transition-speed: fast
         width: 1920
 ---
 {{< include sections/intro.qmd >}}

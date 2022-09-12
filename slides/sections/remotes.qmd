@@ -94,11 +94,11 @@ git push -u origin main
 ```
 - `-u` alebo `--set-upstream` nastaví predvolenú *remote* vetvu (`origin/main`) pre aktuálnu lokálnu vetvu (`main`) 
 
+- ak *remote* vetva `origin/main` neexistuje, `git push` ju automaticky vytvorí
 
-## Poslanie lokálnej kópie na *remote*
-- Príklad výstupu z `git push -u origin main`:
-
+## Príklad výstupu z `git push`
 ```js
+>> git push -u origin main
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 241 bytes | 120.00 KiB/s, done.
@@ -108,14 +108,31 @@ To https://github.com/bbrrck/test-repo-01.git
 branch 'main' set up to track 'origin/main'.
 ```
 
+## Zoznam vetiev
+- `git branch -a` vypíše zoznam všetkých vetiev, lokálnych aj vzdialených
+- `-a` je skratka pre `--all`
+```sh
+git branch -a
+```
+- Výstup --- `*` označuje aktuálnu vetvu:
+```js
+* main
+  tiger
+  remotes/origin/main
+```
+
 
 ## Stiahnutie *remote* zmien do lokálu
-::: {.todo}
-:::
-
-```powershell
+- Pomocou príkazu `git fetch` stiahneme zoznam *remote* verzií:
+```sh
 git fetch
+```
+- Zmeny ktoré nie sú súčasťou lokálneho repozitára zlúčime pomocou `git merge` (bez argumentov):
+```sh
 git merge
+```
+- Vo väčšine môžeme jednoducho zavolať príkaz `git pull`, ktorý je kombináciou `git fetch` a `git merge`:
+```sh
 git pull
 ```
 
