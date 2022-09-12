@@ -57,9 +57,38 @@ $code-block-font-size: 0.8em;
 
     .slide {
 
-        .todo:after {
-            content: "TODO";
-            color: red;
+        .warning,
+        .todo {
+            margin: 1em 0;
+            padding: 0.5em 1em;
+            border-radius: 50px;
+            font-style: italic;
+
+            p {
+                display: inline-block;
+            }
+
+            &:before {
+                font-weight: bold;
+            }
+        }
+
+        .warning {
+            color: #c00;
+            background-color: rgb(236, 207, 207);
+
+            &:before {
+                content: "Pozor! ";
+            }
+        }
+
+        .todo {
+            color: rgb(204, 0, 194);
+            background-color: rgb(233, 207, 236);
+
+            &:before {
+                content: "ToDo: ";
+            }
         }
 
         div.sourceCode {
