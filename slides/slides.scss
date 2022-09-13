@@ -22,10 +22,8 @@ $code-block-font-size: 0.8em;
 /*-- scss:rules --*/
 
 .reveal {
+
     #title-slide {
-        .title {
-            // color: rgb(25, 124, 131);
-        }
 
         .subtitle {
             font-style: italic;
@@ -92,6 +90,10 @@ $code-block-font-size: 0.8em;
 
         .before-1em {
             margin-top: 1em;
+        }
+
+        .todo {
+            display: none;
         }
 
         .myinfo,
