@@ -1,6 +1,5 @@
 # Quarto artifacts
 **/*_files
-**/*.html
 **/.ipynb
 **/.quarto/
 **/_site/
