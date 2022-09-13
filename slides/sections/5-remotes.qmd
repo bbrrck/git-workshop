@@ -200,4 +200,7 @@ git clone https://github.com/bbrrck/zoo.git # naklonuje sa do adresára `zoo`
 1. Nahraj lokálnu vetvu `main` na *remote*
 1. Na Githube pridaj do súboru `zoo.txt` za meno každého zvieraťa jeho emoji: 🐼🐘🐯🦒
 1. Zosynchronizuj lokálne repo s Githubom
+1. Na Githube pridaj do súboru `zoo.txt` nový riadok `krokodíl 🐊` a ulož novú verziu
+1. V lokálnom repe pridaj do súboru `zoo.txt` nový riadok `gorila 🦍` a ulož novú verziu
+1. Zosynchronizuj lokálne repo s Githubom a vyrieš vzniknutý *merge conflict*
 :::

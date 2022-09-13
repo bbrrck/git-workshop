@@ -10,6 +10,7 @@ format:
         auto-animate-duration: 0.8
         center-title-slide: true
         code-line-numbers: false
+        code-overflow: wrap
         height: 860
         highlight-style: gruvbox-dark
         mermaid-format: svg
@@ -25,21 +26,33 @@ format:
         # toc-title: "Obsah"
         width: 1920
 ---
+
 {{< include sections/1-intro.qmd >}}
 {{< include sections/2-git-github.qmd >}}
 {{< include sections/3-basics.qmd >}}
 {{< include sections/4-branches.qmd >}}
 {{< include sections/5-remotes.qmd >}}
 {{< include sections/6-advanced-git.qmd >}}
-<!-- {{< include sections/7-markdown.qmd >}} -->
+{{< include sections/7-markdown.qmd >}}
 {{< include sections/8-links.qmd >}}
 {{< include sections/9-thanks.qmd >}}
+
 
 <!-- 
 
 TODO NOTES:
 - Overall
 -- ESTIMATE TIME BUDGET FOR EACH SECTION AND FOR EXERCISES
+- Section 1
+-- Povedat ze im budem tykat a oni mi maju tiez
+-- Pridat moje skusenosti s ucenim (fr uni, zurich, sk uni)
+-- Povedat ze toto je prvykrat co robim tento kurz, takze je mozne ze tam budu nedostatky
+-- Nevahajte sa pytat otazky
+-- Ak nieco nie je jasne, kludne ma hocikedy preruste a spytatje sa
+-- Kurz nie je prednaska kde ja budem kecat pocas 3 hodin, vsetko sa budem snazit ukazovat aj prakticky, a po kazdej vacsej casti budu cvicenia pre vas aby ste si to co hovorim vyskusali
+-- Verim ze sa naucite vela uzitocnych veci
+-- Organizacia - v strede dlha pauza, kazdych x minut kratke (5-min) pauzy
+
 - Section 2
 -- move "Git slovnik" to the end
 - Section 3

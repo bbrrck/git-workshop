@@ -14,3 +14,5 @@
 - Coursera: [Introduction to Git and GitHub](https://www.coursera.org/learn/introduction-git-github/)
 - Missing Semester of CS Education, [Lecture 6: Version Control (git)](https://www.youtube.com/watch?v=2sjqTHE0zok)
 - [Learn how Git works internally with simple diagrams](https://medium.com/@praveenmuth2/learn-how-git-works-internally-with-simple-diagrams-a9349dc32831)
+- [Markdown Guide](https://www.markdownguide.org/)
+- [Learn Markdown in 5 minutes](https://manan-tank.medium.com/learn-markdown-in-5-minutes-7cc01405495e)
