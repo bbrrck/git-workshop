@@ -1,0 +1,4 @@
+project:
+  output-dir: _output
+  render:
+    - slides/slides.qmd

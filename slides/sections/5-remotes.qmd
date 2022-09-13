@@ -22,7 +22,7 @@
 
 <!-- SHUTTER: CREATE REPO -->
 
-## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new)  {auto-animate=true}
+<!-- ## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new)  {auto-animate=true}
 ::: {data-id=create-repo .shutter style="background-image: url('./img/gh-new-repo/gh-new-full.png')"}
 :::
 
@@ -55,11 +55,28 @@
 :::
 ::: {data-id=arrow .arrow-pointer .absolute left=450 bottom=-130}
 ←
+::: -->
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new)
+::: {.screenshot}
+![](./img/gh-new-repo/gh-new-full.png)
+:::
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new)
+::: {.screenshot}
+![](./img/gh-new-repo/gh-new-top.png)
+:::
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new)
+::: {.screenshot}
+![](./img/gh-new-repo/gh-new-bottom.png)
 :::
 
 <!-- SHUTTER: EMPTY REPO -->
 
-## {auto-animate=true transition="fade" transition-speed="fast"}
+<!-- ## {auto-animate=true transition="fade" transition-speed="fast"}
 ::: {data-id=shNewEmptyRepo .shutter style="margin-top: 0px; background-image: url('./img/gh-new-repo/gh-new-empty-repo.png')"}
 :::
 
@@ -69,7 +86,20 @@
 :::
 
 ::: {.fragment .absolute left=65 bottom=172 style="width: 800px; height: 160px; border: 10px solid red; border-radius: 5px;"}
+::: -->
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new)
+::: {.screenshot}
+![](./img/gh-new-repo/gh-new-empty-repo.png)
 :::
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new)
+::: {.screenshot}
+![](./img/gh-new-repo/gh-new-empty-repo-circled.png)
+:::
+
 
 
 ## Nastavenie *remote* v lokálnom repozitári 
