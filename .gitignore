@@ -8,3 +8,5 @@
 *:Zone.Identifier
 
 /.quarto/
+
+_output/*
