@@ -95,7 +95,7 @@ if __name__ == "__main__":
 
 ### Images
 
-![Queen Elizabeth II](https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Queen_Elizabeth_II_1959.jpg/399px-Queen_Elizabeth_II_1959.jpg) 
+![Queen Elizabeth II]({{< var images.queen-elizabeth-ii >}}) 
 
 ### Blockquotes
 
@@ -118,7 +118,7 @@ if __name__ == "__main__":
 
 ##### Images
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Queen_Elizabeth_II_1959.jpg/399px-Queen_Elizabeth_II_1959.jpg) 
+![]({{< var images.queen-elizabeth-ii >}}) 
 
 ##### Blockquotes
 
