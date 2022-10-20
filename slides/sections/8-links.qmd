@@ -10,6 +10,7 @@
 
 ## Odkazy 
 ### en
+- [Git cheat sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 - *[Pro Git](https://git-scm.com/book/en/v2)*, voľne dostupná oficiálna kniha, k dispozícii čiastočne aj [v češtine](https://git-scm.com/book/cs/v2)
 - [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 - [Git tutoriály](https://www.atlassian.com/git/tutorials) od Atlassianu
