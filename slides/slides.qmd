@@ -285,13 +285,15 @@ Niektoré systémy na kontrolu verzií fungujú tak že vytvoria novú verziu zo
 
 :::
 
-## Úlohy
+## Úlohy (1)
 1. Vytvor si na svojom počítači prázdny adresár, napr. `git-workshop`
 1. Sprav z adresára `git-workshop` Git repozitár 
 1. Vytvor v adresári súbor (napr. `test.txt`) s ľubovoľným obsahom
 1. Pridaj `test.txt` do ďalšej verzie a ulož ju
 
 <!-- ## Krok 5: Git vo VS Code -->
+
+
 
 # Vetvy *(branches)*
 
@@ -333,6 +335,7 @@ Niektoré systémy na kontrolu verzií fungujú tak že vytvoria novú verziu zo
 ## Čo je to vetva *(branch)* ?
 
 - Vetvy slúžia na vybočenie z hlavnej línie a pokračovanie v práci bez zásahu do nej
+- Vetvenie je silnou stránkou Gitu --- prepínanie medzi vetvami je rýchle, čo umožňuje časté vytváranie nových vetiev
 - Doteraz sme pracovali na vetve `main`, ktorú automaticky vytvoril `git init`
 
 - Zoznam vetiev si môžeme pozrieť cez príkaz `git branch`:
@@ -347,48 +350,79 @@ V Gite je prednastavená hlavná vetva `master`. Tento názov sa v posledných r
 
 ## Načo sú dobré vetvy?
 
-::: {.todo}
-:::
+- Vetvy umožňujú efektívne pracovať paralelne na viacerých častiach projektu
+- Príkladom je situácia keď vytvárame novú funkcionalitu (vetva A), a vyskytne sa bug ktorý musí byť hneď opravený (vetva B)
+- Vďaka Gitu môže práca na týchto dvoch vetvách prebiehať nezávisle
 
 ## Vytvorenie vetvy *(branch)*
 
-- Na vytvorenie novej vetvy zavoláme
+- Na vytvorenie novej vetvy zavoláme:
 ```powershell
-git branch slovak
+git branch french
 ```
 
 - Ak sa chceme prepnúť na novú vetvu:
 ```powershell
-git checkout slovak
+git checkout french
 ```
 
-- Táto operácia je veľmi častá, preto existuje skratka:
+- Tieto dve operácie sa veľmi často robia spolu, preto existuje skratka:
 ```powershell
 git checkout -b slovak # vytvor vetvu 'slovak' a prepni sa na ňu
 ```
 
 ## Zlučovanie vetiev *(merge)*
+
+- Ak chceme pridať zmeny spravené na vetve `slovak` do hlavnej vetvy `main`, prepneme sa na hlavnú vetvu:
 ```powershell
 git checkout main
+```
+- Na zlučovanie vetiev použijeme príkaz `git merge`:
+```powershell
 git merge slovak
 ```
 
-Výstup:
-```markdown
+## Zlučovanie vetiev *(merge)*
+#### Auto-merge
+- Ak je to možné, Git automaticky zlúči zmeny z oboch vetiev. V takom prípade uvidíme nasledovný výstup:
+```js
+>> git merge slovak
 Auto-merging hello.py
 Merge made by the 'ort' strategy.
  hello.py | 12 +++++++++++-
  1 file changed, 11 insertions(+), 1 deletion(-)
  ```
 
-```markdown
+## Zlučovanie vetiev *(merge)*
+#### Fast-forward
+- V prípade že zlučovaná vetva je priamym potomkom cieľovej vetvy, Git urobí tzv. *fast-forward*:
+```js
+>> git merge comment
+Updating 3a5d22e..9ad633c
+Fast-forward
+ hello.py | 1 +
+ 1 file changed, 1 insertion(+)
+ ```
+
+## Zlučovanie vetiev *(merge)*
+#### Riešenie konfliktov
+- Ak automatické zlúčenie zlyhá, Git nám vo výstupe nahlási *merge conflict*. V takomto prípade musia byť zmeny z oboch vetiev zlúčené manuálne.
+```js
+>> git merge french
 Auto-merging hello.py
 CONFLICT (content): Merge conflict in hello.py
 Automatic merge failed; fix conflicts and then commit the result.
 ```
+- Po zlúčení je potrebné pridať zmenené súbory do novej verzie:
+```powershell
+git add hello.py
+git commit -m "Merged branch 'french'"
+```
 
+
+## Príklad `git log` histórie
 ```sh
-*   3a5d22e (HEAD -> main) Merge all languages
+*   3a5d22e (HEAD -> main) Merge branch 'french'
 |\
 | * 21c7ab7 (french) Add french functionality
 * |   1364948 Merge branch 'slovak'
@@ -400,27 +434,22 @@ Automatic merge failed; fix conflicts and then commit the result.
 * de1543b Add hello.py
 ```
 
-## Riešenie *merge* konfliktov
-::: {.todo}
-:::
-
-```powershell
-git merge cat
-# (!)
-# konflikt v animals.py:
-# zmeny z oboch vetiev musia byť 
-# zlúčené manuálne (napr. vo VS Code)
-
-# pridaj zmeny do ďalšej verzie
-git add animals.py
-# ulož novú verziu su zlúčenými zmenami
-git commit -m "merged dog and cat features"
-```
 
 ## {background-image="img/git-conflict-vs-code-gui.png" background-size="contain"}
 
-<!-- ## Riešenie *merge* konfliktov -->
-<!-- ![](img/git-conflict-vs-code-gui.png) -->
+
+## Úlohy (2)
+1. Prepnite sa vo svojom lokálnom repozitári na novú vetvu `animals`.
+2. Vytvorte v repozitári nový súbor `zvierata.txt` s nasledovným obsahom:
+```powershell
+panda
+slon
+lev
+zirafa
+```
+3. Vytvorte novú verziu ktorá bude obsahovať `zvierata.txt`.
+4. Zlúčte zmeny spravené na vetve `animals` do vetvy `main`.
+
 
 # Vzdialené repozitáre *(remote)*
 
@@ -445,6 +474,17 @@ To https://github.com/bbrrck/test-repo-01.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
 ```
+
+## Stiahnutie vzdialených zmien do lokálneho repozitára
+::: {.todo}
+:::
+
+```powershell
+git fetch
+git merge
+git pull
+```
+
 
 ## Klonovanie existujúceho *remote* repozitára
 
