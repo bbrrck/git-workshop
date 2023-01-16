@@ -5,6 +5,9 @@ author: "Tibor Stanko"
 date: "13.09.22"
 format:
     revealjs: 
+        embed-resources: true
+        standalone: true
+
         auto-animate-easing: ease-in-out
         auto-animate-unmatched: false
         auto-animate-duration: 0.8
