@@ -127,29 +127,31 @@ format:
     - ...
 - podobné služby: [Gitlab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), [Azure DevOps](https://dev.azure.com/), 
 <!-- [Google Cloud Source Repositories](https://source.cloud.google.com/onboarding/welcome), -->
-...
+
 
 ## {background-image="img/github-screenshot.png" background-size="contain"}
 
 # Základy Gitu
 
-## Krok 0: Pracujeme s konzolou
+## Krok 0: Pracujeme s terminálom
 
-- aby sme lepšie pochopili ako Git funguje, budeme na začiatku spúšťať Git príkazy cez **konzolu** (terminál)
-- neskôr si ukážeme aj použitie Gitu bez konzoly (napr. vo VS Code)
-- vo Windowse: **PowerShell**
-- dve možnosti ako spustiť PowerShell:
-    a. vyhľadajte "powershell" cez štartové menu 
-    b. stlačte `⊞ Win + R`, do okna napíšte "powershell" a stlačte OK
-- voliteľné nástroje pre lepšiu použiteľnosť:
-    - [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=us)
-    - [Oh My Posh](https://ohmyposh.dev/): prompt theme engine
-    
-::: {.notes}
-- aby sme lepšie pochopili ako Git funguje, budeme na začiatku spúšťať Git príkazy cez konzolu (terminál)
-- neskôr si ukážeme ako sa Git dá používať bez konzoly (mnohé textové editory a IDE majú zabudovanú Git integráciu)
-:::
+- aby sme pochopili ako Git funguje, budeme na začiatku spúšťať Git príkazy cez **terminál**
+- neskôr si ukážeme aj použitie Gitu priamo v IDE (napr. vo VS Code)
+- vo **Windowse** odporúčam [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=us) a PowerShell
 
+. . .
+
+- základné príkazy na navigáciu v termináli:
+    - `pwd` --- vypíš aktuálny adresár
+    - `cd folder` --- zmeň aktuálny adresár na `folder`
+
+```powershell
+>> pwd                        # C:\Users\tibor.stanko
+>> cd folder                  # C:\Users\tibor.stanko\folder
+>> cd ..                      # C:\Users\tibor.stanko
+>> cd C:\Users\janko.hrasko\  # C:\Users\janko.hrasko
+>> cd ~                       # C:\Users\tibor.stanko
+```
 
 ## Krok 1: Inštalácia Gitu
 
@@ -175,7 +177,7 @@ Skontrolujme či je Git správne nainštalovaný:
 git --version
 ```
 
-Predtým ako začneme pracovať s Gitom, je potrebné nastaviť si meno a email. Tieto údaje bude Git používať na priradenie autora k verzii:
+Predtým ako začneme pracovať s Gitom, je potrebné nastaviť si meno a email. Tieto údaje bude Git používať na priradenie autora k verzii.
 ```sh
 git config --global user.name "Tibor Stanko"
 git config --global user.email "tibor.stanko@zurich.com"
@@ -183,18 +185,24 @@ git config --global user.email "tibor.stanko@zurich.com"
 
 ## Krok 3: Vytvorenie Git repozitára
 
-```sh
-cd git-workshop
+- príkaz `git init` slúži na vytvorenie Git repozitára v lokálnom adresári
+- pred jeho zavolaním sa prepneme do adresára z ktorého chceme spraviť repozitár
+
+```powershell
+cd ~\awesome-project
+# aktuálny adresár = C:\Users\tibor.stanko\awesome-project
 git init
 ```
 
 ## Krok 4: Uloženie verzie
+- uloženie verzie prebieha v dvoch krokoch
+    1. cez `git add` označíme zmeny ktoré majú byť pridané do nasledujúcej verzie
+    1. zavolaním `git commit` vytvoríme novú verziu
 
 ```sh
-git status
-git status -s
-git add test.txt
-git commit -m "pridal som test.txt"
+git status # alebo `git status -s`
+git add awesome-function.py
+git commit -m "pridal som awesome-function.py"
 ```
 
 ## Úlohy
