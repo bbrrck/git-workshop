@@ -6,7 +6,7 @@
 - angl. *version control system* (VCS) alebo *source control management* (SCM)
 - zaznamenáva históriu vývoja projektu
 - užitočný pre tímy aj pre jednotlivcov
-- nie je len o kóde, dovoľuje ukladať ľubovoľné súbory
+- nie je len o kóde, dovoľuje ukladať ľubovoľné súbory (aj netextové)
 
 
 ## Prečo potrebujeme systémy riadenia verzií?
@@ -24,6 +24,7 @@
 - **porovnávať** verzie
 - vytvárať **vetvy**
 - **zlučovať** vetvy
+- **zálohovať** súbory
 <!-- - riešiť konflikty medzi vetvami -->
 <!-- ::: -->
 

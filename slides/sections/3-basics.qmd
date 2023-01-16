@@ -135,6 +135,18 @@ Neflákajte písanie *commit messages*!
 :::
 
 
+## Prečo verziu ukladáme v dvoch krokoch?
+
+Niektoré systémy na kontrolu verzií fungujú tak že vytvoria novú verziu zo všetkých aktuálnych súborov v repozitári. Tento spôsob ukladania záloh môže byť nevýhodný. Príkladom je situácia keď sme v repozitári implementovali dve nezávislé funkcie, a chceme ich zachytiť v dvoch rozdielnych verziách. V Gite preto existuje koncept prípravnej zóny (*staging area*), vďaka ktorej máme kontrolu nad tým ktoré zmeny budú a ktoré nebudú pridané do nasledujúcej verzie.
+
+```zsh
+# 1. add/stage - pridaj súbor prípravnej zóny
+git add test.txt
+# 2. commit - ulož novú verziu
+git commit -m "added test.txt"
+```
+
+
 ## Krok 5: Kontrola stavu repozitára
 
 - Aktuálny stav repozitára môžeme skontrolovať cez `git status`:
@@ -151,11 +163,6 @@ Date:   Tue Sep 13 17:00:00 2022 +0200
 
     Add hello.py
 ``` 
-
-::: {.notes}
-Niektoré systémy na kontrolu verzií fungujú tak že vytvoria novú verziu zo všetkých aktuálnych súborov v repozitári. Tento spôsob ukladania záloh môže byť nevýhodný. Príkladom je situácia keď sme v repozitári implementovali dve nezávislé funkcie, a chceme ich zachytiť v dvoch rozdielnych verziách. V Gite preto existuje koncept prípravnej zóny (*staging area*), vďaka ktorej máme kontrolu nad tým ktoré zmeny budú a ktoré nebudú pridané do nasledujúcej verzie.
-
-:::
 
 
 ## Úlohy (1) {.exercise #exercise-1-basics}

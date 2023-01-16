@@ -104,7 +104,7 @@ git commit -m "Merged branch 'french'"
 git branch -d comment
 ```
 
-::: {.warning .fragment .fade-in}  
+::: {.warning .fade-in}  
 Po vymazaní je vetva odstránená z histórie a nie je možné ju obnoviť.
 :::
 

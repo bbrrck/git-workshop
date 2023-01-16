@@ -91,5 +91,5 @@ git reset --hard <commit_id>
 ```
 
 ::: {.warning}
-Príkaz `git reset` mení históriu repozitára a môže mať za následok stratu kódu alebo údajov.
+Príkaz `git reset` mení históriu repozitára a môže spôsobiť stratu súborov.
 ::: 
