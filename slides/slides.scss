@@ -1,0 +1,17 @@
+/*-- scss:defaults --*/
+
+// $body-bg: #191919;
+// $body-color: #fff;
+// $link-color: #42affa;
+$code-block-font-size: 1.0em;
+
+/*-- scss:rules --*/
+
+.reveal .slide {
+    div.sourceCode {
+        margin-top: 0.5em;
+    }
+    h2+div.sourceCode {
+        margin-top: 1em;
+    }
+}
