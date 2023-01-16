@@ -11,7 +11,22 @@ $code-block-font-size: 1.0em;
     div.sourceCode {
         margin: 0.25em 0 0.5em;
     }
+
     h2+div.sourceCode {
         margin-top: 1em;
+    }
+
+    .rounded-corners {
+        border-radius: 100%;
+    }
+
+    .table {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .column.smaller {
+        font-size: 90%;
     }
 }

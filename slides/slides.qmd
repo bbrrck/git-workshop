@@ -16,8 +16,8 @@ format:
         # toc: true
         # toc-depth: 1
         # footer: "Git workshop - 13.9.2022"
-        center-title-slide: true
-        code-line-numbers: true
+        # center-title-slide: true
+        # code-line-numbers: true
         title-slide-attributes:
             data-background-image: img/hero.svg
             data-background-size: 50%
@@ -31,17 +31,17 @@ format:
 
 :::: {.columns}
 
-::: {.column width="70%"}
+::: {.column width="72%"}
 - [Tibor Stanko](https://tiborstanko.sk/), 31 rokov
 - od 2020 dátový inžinier v Zurich Insurance, Bratislava 🇸🇰
 - predtým 6 rokov v akademickej sfére vo 🇫🇷 (PhD, postdoc)
 - rád automatizujem nudné úlohy s pomocou Pythonu 🐍
-- nie som Git guru, no Git používam už viac ako 7 rokov
-- moje voľnočasové aktivity: 👨‍👩‍👧‍👦🧱🚲🏃⛰️
+- nie som Git guru, no Git používam denne už viac ako 7 rokov
+- moje voľnočasové aktivity: 👨‍👩‍👧‍👦🚲⛰️🎸🎹🍺
 :::
 
-::: {.column width="30%"}
-![](img/tibors.jpg){border-radius=100px}
+::: {.column width="28%"}
+![](img/tibors.jpg){.rounded-corners}
 :::
 
 ::::
@@ -57,10 +57,10 @@ format:
 ## Čo je to Git?
 
 - **systém pre správu verzií**
-- angl. *version control system* (VCS)
+- angl. *version control system* (VCS) alebo *source control management* (SCM)
 - zaznamenáva históriu vývoja projektu
 - užitočný pre tímy aj pre jednotlivcov
-- nie je len o kóde
+- nie je len o kóde, dovoľuje ukladať ľubovoľné súbory
 
 ## Čo umožňuje Git?
 - ukladanie verzií
@@ -76,20 +76,26 @@ format:
 
 ## Čo je to Github?
 
-<!-- ::: {.smaller} -->
-
 ## Git slovník
 
+::: {.columns}
+
+::: {.column width="50%" .smaller}
 | en | sk |
 |---|---|
 | *branch*              | vetva |
 | *clone*               | naklonovanie repozitára |
-| *commit*              | záznam, zaznamenanie |
+| *commit*              | záznam |
 | *commit message*      | popis záznamu |
 | *conflict*            | konflikt medzi verziami |
 | *conflict resolution* | riešenie konfliktov |
 | *diff*                | rozdiel medzi verziami |
 | *merge*               | zlúčenie vetiev |
+:::
+
+::: {.column width="50%" .smaller}
+| en | sk |
+|---|---|
 | *pull*                | stiahnutie *remote* zmien |
 | *push*                | odoslanie lokálnych zmien |
 | *repository*          | repozitár, úložisko |
@@ -98,12 +104,11 @@ format:
 | *staging area*        | prípravná oblasť (tiež *index*) |
 | *status*              | stav repozitára |
 | *version*             | verzia |
+:::
 
 :::
 
- <!-- SECTION -->
-
-# Pracujeme s Gitom: základy
+# Základy Gitu
 
 ## Krok 0: PowerShell
 
@@ -112,7 +117,7 @@ format:
 
 Vo **Windowse** existuje viacero spôsobov ako nainštalovať Git, napr.
 
-- cez [scoop](https://scoop.sh/) (odporúčam): v PowerShell spustite nasledovné príkazy:
+- cez [scoop](https://scoop.sh/) (odporúčam) --- v PowerShell spustite nasledovné príkazy:
 ```powershell
 # inštalácia scoopu
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -132,10 +137,9 @@ Inštrukcie pre **macOS** a **Linux** sú k dispozícii na oficiálnej stránke 
 git --version
 git config --global user.name "Tibor Stanko"
 git config --global user.email "tibor.stanko@zurich.com"
-git config --global init.defaultBranch main
 ```
 
-## Krok 3: Vytvorenie repozitára
+## Krok 3: Vytvorenie Git repozitára
 
 ```sh
 cd git-workshop
@@ -154,13 +158,48 @@ git commit -m "pridal som test.txt"
 ## Úlohy
 1. Vytvor si na svojom počítači prázdny adresár `git-workshop`
 1. Sprav z adresára `git-workshop` Git repozitár 
-1. Vytvor v adresári súbor `test.txt` s obsahom `Ahoj Aj Ty v IT!`
-1. Pridaj `test.txt` do ďalšej verzie
-1. Ulož novú verziu
+1. Vytvor v adresári súbor `test.txt` s ľubovoľným obsahom
+1. Pridaj `test.txt` do ďalšej verzie a ulož ju
 
-# Vzdialené repozitáre
+## Demo: VS Code Gui
 
-## Git push
+# Vetvy *(branches)*
+
+## Načo sú dobré vetvy?
+
+## Vytvorenie vetvy *(branch)*
+```sh
+git branch dog
+git checkout dog
+```
+
+alebo
+
+```sh
+git checkout -b dog
+```
+
+## Zlučovanie vetiev *(merge)*
+
+```sh
+git checkout main
+git merge dog
+```
+
+## Riešenie *merge* konfliktov
+
+
+
+
+# Vzdialené repozitáre *(remote)*
+
+## Vytvorenie repozitára na Githube
+
+## Poslanie lokálnej kópie na *remote*
+
+```sh
+git push -u origin main
+```
 
 ```powershell
 PS C:\Users\tibor.stanko\repo> git push -u origin main
@@ -172,6 +211,8 @@ To https://github.com/bbrrck/test-repo-01.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
 ```
+
+## Klonovanie existujúceho *remote*
 
 
 # Užitočné zdroje
