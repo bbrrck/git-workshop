@@ -1,0 +1,5 @@
+ako otvorit slidy:
+1. stiahni si html subor git-workshop-220913-slides-v1.html z Drive
+	- pripadne najaktualnejsiu verziu z Githubu
+	https://raw.githubusercontent.com/bbrrck/git-workshop-220913/main/_output/slides/slides.html
+2. otvor html subor v prehliadaci
