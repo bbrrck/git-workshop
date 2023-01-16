@@ -1,6 +1,0 @@
-project:
-  output-dir: _output
-  title: "slides"
-  type: site
-  render:
-    - slides.qmd

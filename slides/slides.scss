@@ -43,6 +43,18 @@ $code-block-font-size: 0.8em;
         }
     }
 
+    .slide.exercise {
+        li {
+            // color: rgb(26, 141, 161) !important;
+            // font-variant: small-caps;
+            // font-style: italic;
+
+            // code {
+            //     font-style: normal;
+            // }
+        }
+    }
+
     .slide {
 
         .todo:after {
@@ -52,6 +64,10 @@ $code-block-font-size: 0.8em;
 
         div.sourceCode {
             margin: 0.1em 0 0.25em;
+
+            pre {
+                padding-top: 0.5em;
+            }
         }
 
         code {
@@ -61,6 +77,11 @@ $code-block-font-size: 0.8em;
             background-color: #f4e7c9;
             color: #282828;
         }
+
+        // pre.plaintext code {
+        //     background-color: #282828;
+        //     color: #f4e7c9;
+        // }
 
         h2+div.sourceCode {
             margin-top: 1em;
