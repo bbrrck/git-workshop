@@ -2,17 +2,17 @@
 
 ## Čo je to Git?
 
-- **systém pre správu verzií**
+- **systém riadenia verzií**
 - angl. *version control system* (VCS) alebo *source control management* (SCM)
 - zaznamenáva históriu vývoja projektu
 - užitočný pre tímy aj pre jednotlivcov
 - nie je len o kóde, dovoľuje ukladať ľubovoľné súbory
 
 
-## Prečo potrebujeme systémy na správu verzií?
+## Prečo potrebujeme systémy riadenia verzií?
 ![](img/how-not-to-name-files.png)
 
-## Prečo potrebujeme systémy na správu verzií?
+## Prečo potrebujeme systémy riadenia verzií?
 ![](img/how-not-to-name-files-crossed.png)
 
 ## Čo umožňuje Git?
@@ -61,7 +61,7 @@
 
 ## Čo je to Github?
 - *"sociálna sieť pre programátorov"*
-- **Git** = systém na správu verzií
+- **Git** = systém riadenia verzií
 - **Github** = cloudový portál na ukladanie repozitárov
 - používa Git, no nie je jeho súčasťou
 <!-- - portál na ukladanie vzdialených Git repozitárov -->

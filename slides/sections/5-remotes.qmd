@@ -83,7 +83,7 @@ git remote add origin https://github.com/bbrrck/zoo.git
 
 
 ## Poslanie lokálnej kópie na *remote*
-- Príkaz `git push <remote> <branch>` "natlačí" lokálne zmeny z vetvy `branch` do vzdialeného repozitára `remote`:
+- Príkaz `git push <remote> <branch>` "pretlačí" lokálne zmeny z vetvy `branch` do vzdialeného repozitára `remote`:
 ```zsh
 git push origin main
 ```

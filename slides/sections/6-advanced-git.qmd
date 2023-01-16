@@ -1,27 +1,46 @@
 # Pokročilý Git
 
-## Pokročilý Git
+## `.gitignore`
+- špecifikuje ktoré súbory má Git ignorovať
+- [.gitignore generátor](https://www.toptal.com/developers/gitignore)
 
-```powershell
+## `git <command> --help`
+
+```zsh
 # vypíš pomoc (dokumentáciu) ku danému príkazu -- napr. git commit
-git commit --help # alebo `git commit -h`
+git commit --help 
+# alebo 
+git commit -h
+```
 
-# ineraktívne pridaj zmeny
-git add --interactive # alebo `git add -i`
+## `git add --interactive`
+```zsh
+# interaktívne pridaj zmeny
+git add --interactive 
+# alebo
+git add -i
+```
 
+## `git log`
+```zsh
 # prispôb výstup z git logu 
 git log --all --oneline --graph --decorate
 
 # alebo:
 git config --global alias.nicelog "log --all --graph --decorate --oneline"
 git nicelog
+```
 
+## `git blame`
+```zsh
 # zisti kto spravil poslednú zmenu v každom riadku
 git blame
+```
 
-# dočasne vymaž zmeny vo working directory
+## `git stash`
+```zsh
+# dočasne odstráň zmeny vo working directory
 git stash
-
-# špecifikuj ktoré súbory má git ignorovať
-.gitignore
+# obnov odstránené zmeny
+git stash pop
 ```
