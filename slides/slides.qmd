@@ -5,23 +5,16 @@ author: "Tibor Stanko"
 date: "13.09.22"
 format:
     revealjs: 
-        #embed-resources: true
-        #standalone: true
         auto-animate-easing: ease-in-out
         auto-animate-unmatched: false
         auto-animate-duration: 0.8
         center-title-slide: true
-        # chalkboard: true
         code-line-numbers: false
-        # footer: "Git workshop --- Aj Ty v IT --- Tibor Stanko --- 13.09.22"
-        height: 820
+        height: 860
         highlight-style: gruvbox-dark
-        # highlight-style: gruvbox-light
-        # logo: logo.png
         mermaid-format: svg
         number-depth: 1
         number-sections: true
-        # preview-links: true
         theme: [simple, slides.scss]
         title-slide-attributes:
             data-background-image: img/hero.svg
@@ -32,21 +25,12 @@ format:
         toc: true
         width: 1920
 ---
-
 {{< include sections/intro.qmd >}}
-
 {{< include sections/git-github.qmd >}}
-
 {{< include sections/basics.qmd >}}
-
 {{< include sections/branches.qmd >}}
-
 {{< include sections/remotes.qmd >}}
-
 {{< include sections/advanced-git.qmd >}}
-
 {{< include sections/markdown.qmd >}}
-
 {{< include sections/links.qmd >}}
-
 {{< include sections/thanks.qmd >}}

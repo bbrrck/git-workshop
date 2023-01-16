@@ -79,7 +79,7 @@ Initialized empty Git repository in C:/Users/tibor.stanko/hello/.git/
 ```
 
 
-## Krok 4: Uloženie verzie {auto-animate="true" auto-animate-easing="ease-in-out"}
+## Krok 4: Uloženie verzie
 
 Uloženie verzie prebieha v dvoch krokoch.
 
@@ -93,24 +93,24 @@ git add hello.py
 git commit -m "Add hello.py"
 ```
 
-<!-- ![](https://rogerdudler.github.io/git-guide/img/trees.png) -->
+<!-- ::: {.fragment .fade-in .center}
+![](https://rogerdudler.github.io/git-guide/img/trees.png)
+::: -->
 
 
-## Krok 4: Uloženie verzie {auto-animate="true" auto-animate-easing="ease-in-out"}
-
+## Krok 4: Uloženie verzie (2)
 - Popis záznamu *(commit message)* je väčšinou krátka jednoriadková správa ktorá sa špecifikuje cez argument `-m "commit message"`
-
 - Ak chceme napísať dlhší popis, argument `-m` vynecháme. `git commit` vtedy otvorí textový editor v ktorom popis napíšeme. 
-
 - V Gite na Windowse je na písanie *commit message* predvolený editor `vim`, ktorý beží priamo v termináli. Ak nemáte skúsenosti s používaním vimu, môžete si editor zmeniť napr. na `notepad`:
 ```powershell
 git config --global core.editor notepad
 ```
 
-## Krok 4: Uloženie verzie {auto-animate="true" auto-animate-easing="ease-in-out"}
+
+## Krok 4: Uloženie verzie (3)
 - Je **dôležité** písať dobré *commit messages*! 
 
-::: {.center}
+::: {.center .width-080}
 ![](https://imgs.xkcd.com/comics/git_commit_2x.png)
 :::
 
