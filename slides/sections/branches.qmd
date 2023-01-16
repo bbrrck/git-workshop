@@ -1,0 +1,160 @@
+# Vetvy *(branches)*
+
+```{mermaid}
+%%{
+    init: { 
+        'logLevel': 'debug', 
+        'theme': 'base', 
+        'themeVariables': {
+
+        },
+        'gitGraph': {
+            'showCommitLabel': false, 
+            'showBranches': false, 
+            'mainBranchName': 'main'
+        } 
+    } 
+}%%
+    gitGraph
+        checkout main
+        commit
+        commit
+        branch bugfix
+        branch feature
+        checkout bugfix
+        commit
+        commit
+        checkout feature
+        commit
+        commit
+        commit
+        commit
+        checkout main
+        merge bugfix
+        merge feature
+```
+
+
+## Čo je to vetva *(branch)* ?
+
+- Vetvy slúžia na vybočenie z hlavnej línie a pokračovanie v práci bez zásahu do nej
+- Vetvenie je silnou stránkou Gitu --- prepínanie medzi vetvami je rýchle, čo umožňuje časté vytváranie nových vetiev
+- Doteraz sme pracovali na vetve `main`, ktorú automaticky vytvoril `git init`
+
+- Zoznam vetiev si môžeme pozrieť cez príkaz `git branch`:
+```powershell
+>> git branch
+* main
+```
+
+::: {.fontsize-070}
+V Gite je prednastavená hlavná vetva `master`. Tento názov sa v posledných rokoch [stal kontroverzným](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) a postupne sa [prestáva používať](https://github.blog/changelog/2020-10-01-the-default-branch-for-newly-created-repositories-is-now-main/). Preto sme pri [nastavovaní Gitu](#/krok-2-nastavenie-gitu) zmenili `init.defaultBranch` na `main`.
+:::
+
+
+## Načo sú dobré vetvy?
+
+- Vetvy umožňujú efektívne pracovať paralelne na viacerých častiach projektu
+- Príkladom je situácia keď vytvárame novú funkcionalitu (vetva A), a vyskytne sa bug ktorý musí byť hneď opravený (vetva B)
+- Vďaka Gitu môže práca na týchto dvoch vetvách prebiehať nezávisle
+
+
+## Vytvorenie vetvy *(branch)*
+
+- Na vytvorenie novej vetvy zavoláme:
+```powershell
+git branch french
+```
+
+- Ak sa chceme prepnúť na novú vetvu:
+```powershell
+git checkout french
+```
+
+- Tieto dve operácie sa veľmi často robia spolu, preto existuje skratka:
+```powershell
+git checkout -b slovak # vytvor vetvu 'slovak' a prepni sa na ňu
+```
+
+
+## Zlučovanie vetiev *(merge)*
+
+- Ak chceme pridať zmeny spravené na vetve `slovak` do hlavnej vetvy `main`, prepneme sa na hlavnú vetvu:
+```powershell
+git checkout main
+```
+- Na zlučovanie vetiev použijeme príkaz `git merge`:
+```powershell
+git merge slovak
+```
+
+
+## Zlučovanie vetiev *(merge)*
+#### Auto-merge
+- Ak je to možné, Git automaticky zlúči zmeny z oboch vetiev. V takom prípade uvidíme nasledovný výstup:
+```js
+>> git merge slovak
+Auto-merging hello.py
+Merge made by the 'ort' strategy.
+ hello.py | 12 +++++++++++-
+ 1 file changed, 11 insertions(+), 1 deletion(-)
+ ```
+
+
+## Zlučovanie vetiev *(merge)*
+#### Fast-forward
+- V prípade že zlučovaná vetva je priamym potomkom cieľovej vetvy, Git urobí tzv. *fast-forward*:
+```js
+>> git merge comment
+Updating 3a5d22e..9ad633c
+Fast-forward
+ hello.py | 1 +
+ 1 file changed, 1 insertion(+)
+ ```
+
+
+## Zlučovanie vetiev *(merge)*
+#### Riešenie konfliktov
+- Ak automatické zlúčenie zlyhá, Git nám vo výstupe nahlási *merge conflict*. V takomto prípade musia byť zmeny z oboch vetiev zlúčené manuálne.
+```js
+>> git merge french
+Auto-merging hello.py
+CONFLICT (content): Merge conflict in hello.py
+Automatic merge failed; fix conflicts and then commit the result.
+```
+- Po zlúčení je potrebné pridať zmenené súbory do novej verzie:
+```powershell
+git add hello.py
+git commit -m "Merged branch 'french'"
+```
+
+
+## Príklad `git log` histórie
+```sh
+*   3a5d22e (HEAD -> main) Merge branch 'french'
+|\
+| * 21c7ab7 (french) Add french functionality
+* |   1364948 Merge branch 'slovak'
+|\ \
+| * | c3159a6 (slovak) Add slovak functionality
+| |/
+* / 67e86d0 Fix missing exclamation mark
+|/
+* de1543b Add hello.py
+```
+
+
+## {background-image="img/git-conflict-vs-code-gui.png" background-size="contain"}
+
+
+## Úlohy (2)
+1. Prepnite sa vo svojom lokálnom repozitári na novú vetvu `animals`.
+2. Vytvorte v repozitári nový súbor `zvierata.txt` s nasledovným obsahom:
+```powershell
+panda
+slon
+lev
+zirafa
+```
+3. Vytvorte novú verziu ktorá bude obsahovať `zvierata.txt`.
+4. Zlúčte zmeny spravené na vetve `animals` do vetvy `main`.

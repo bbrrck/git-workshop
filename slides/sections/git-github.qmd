@@ -1,0 +1,72 @@
+# Git a Github
+
+## Čo je to Git?
+
+- **systém pre správu verzií**
+- angl. *version control system* (VCS) alebo *source control management* (SCM)
+- zaznamenáva históriu vývoja projektu
+- užitočný pre tímy aj pre jednotlivcov
+- nie je len o kóde, dovoľuje ukladať ľubovoľné súbory
+
+
+## Prečo potrebujeme systémy na správu verzií?
+![](img/how-not-to-name-files.png)
+
+## Prečo potrebujeme systémy na správu verzií?
+![](img/how-not-to-name-files-crossed.png)
+
+## Čo umožňuje Git?
+
+<!-- ::: {.incremental} -->
+- ukladať verzie
+- prepínať medzi verziami
+- obnoviť predošlú verziu
+- porovnávať verzie
+- vytvárať vetvy
+- zlučovať vetvy
+<!-- - riešiť konflikty medzi vetvami -->
+<!-- ::: -->
+
+## Git slovník
+
+::: {.columns}
+
+::: {.column width="50%" .git-slovnik}
+| en | sk |
+|---|---|
+| *branch*              | vetva |
+| *clone*               | naklonovanie repozitára |
+| *commit*              | záznam |
+| *commit message*      | popis záznamu |
+| *conflict*            | konflikt medzi verziami |
+| *conflict resolution* | riešenie konfliktov |
+| *diff*                | rozdiel medzi verziami |
+| *merge*               | zlúčenie vetiev |
+:::
+
+::: {.column width="50%" .git-slovnik}
+| en | sk |
+|---|---|
+| *pull*                | stiahnutie vzdialených zmien |
+| *push*                | odoslanie lokálnych zmien |
+| *repository*          | repozitár, úložisko |
+| *remote*              | vzdialený repozitár |
+| *snapshot*            | snímka |
+| *staging area*        | prípravná oblasť (tiež *index*) |
+| *status*              | stav repozitára |
+| *version*             | verzia |
+:::
+
+:::
+
+## Čo je to Github?
+- *"sociálna sieť pre programátorov"*
+- **Git** = systém na správu verzií
+- **Github** = cloudový portál na ukladanie repozitárov
+- používa Git, no nie je jeho súčasťou
+<!-- - portál na ukladanie vzdialených Git repozitárov -->
+- obsahuje funkcionalitu ktorá nie je v Gite
+    - *Issues*, *Pull requests*, *Actions*, ...
+- podobné služby: [Gitlab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), [Azure DevOps](https://dev.azure.com/), a iné
+
+## {background-image="../img/github-screenshot.png" background-size="contain"}

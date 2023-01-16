@@ -1,0 +1,22 @@
+# Užitočné zdroje
+
+
+## Dokumentácia
+- [Oficiálna stránka](https://git-scm.com) a [dokumentácia](https://git-scm.com/doc) Gitu
+- [Pro Git](https://git-scm.com/book/en/v2), voľne dostupná oficiálna kniha, k dispozícii čiastočne aj [v češtine](https://git-scm.com/book/cs/v2)
+
+
+## Kurzy & tutoriály
+
+### sk
+- videokurz od Yablka: [Git a Github od základov](https://www.youtube.com/watch?v=0v5K4GvK4Gs)
+- predmet *Základy softvérového inžinierstva* na FEI TUKE
+    - časť 2: [Systémy pre správu verzií](https://kurzy.kpi.fei.tuke.sk/zsi/labs/02-git.html)
+    - časť 3: [Práca s vetvami v systéme Git](https://kurzy.kpi.fei.tuke.sk/zsi/labs/03-git.html)
+
+### en
+- [git - the simple guide](https://rogerdudler.github.io/git-guide/)
+- Coursera: [Introduction to Git and GitHub](https://www.coursera.org/learn/introduction-git-github/)
+- Missing Semester of CS Education, [Lecture 6: Version Control (git)](https://www.youtube.com/watch?v=2sjqTHE0zok)
+- [Learn how Git works internally with simple diagrams](https://medium.com/@praveenmuth2/learn-how-git-works-internally-with-simple-diagrams-a9349dc32831)
+- [Atlassian Git tutorial](https://www.atlassian.com/git/tutorials)

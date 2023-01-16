@@ -1,62 +1,94 @@
 /*-- scss:defaults --*/
 
+// https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables
+
+/* Colors */
 // $body-bg: #191919;
 // $body-color: #fff;
 // $link-color: #42affa;
+// $presentation-heading-color: #383d3d !default;
+
+/* Font families */
+// 'simple' theme default fonts:
+//      content: Lato
+//      headings: News Cycle 
+// $font-family-sans-serif: "Source Sans Pro", sans-serif !default;
+// $presentation-heading-font: "News Cycle", sans-serif !default;
+
+/* Font sizes */
+$presentation-font-size-root: 50px; // default: 40px
 $code-block-font-size: 0.8em;
 
 /*-- scss:rules --*/
 
-.reveal .slide {
+.reveal {
+    #title-slide {
+        .title {}
 
-    .todo:after {
-        content: "TODO";
-        color: red;
+        .subtitle {
+            font-style: italic;
+        }
+
+        .author {
+            font-style: italic;
+        }
+
+        .date {
+            font-style: italic;
+        }
     }
 
-    div.sourceCode {
-        margin: 0.1em 0 0.25em;
-    }
+    .slide {
 
-    code {
-        display: inline-block;
-        padding: 0 0.25em;
-        margin: 0 0.25em;
-        background-color: #f4e7c9;
-        color: #282828;
-    }
+        .todo:after {
+            content: "TODO";
+            color: red;
+        }
 
-    h2+div.sourceCode {
-        margin-top: 1em;
-    }
+        div.sourceCode {
+            margin: 0.1em 0 0.25em;
+        }
 
-    .rounded-corners {
-        border-radius: 100%;
-    }
+        code {
+            display: inline-block;
+            padding: 0 0.25em;
+            margin: 0 0.25em;
+            background-color: #f4e7c9;
+            color: #282828;
+        }
 
-    .table {
-        width: 100%;
-        padding: 0;
-        margin: 0;
-    }
+        h2+div.sourceCode {
+            margin-top: 1em;
+        }
 
-    .column.git-slovnik {
-        font-size: 90%;
-    }
+        .rounded-corners {
+            border-radius: 100%;
+        }
 
-    .fontsize-070 {
-        font-size: 70%;
-    }
+        .table {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
 
-    .fontsize-075 {
-        font-size: 75%;
-    }
+        .column.git-slovnik {
+            font-size: 90%;
+        }
 
-    .fontsize-080 {
-        font-size: 80%;
-    }
+        .fontsize-070 {
+            font-size: 70%;
+        }
 
-    .fontsize-090 {
-        font-size: 90%;
+        .fontsize-075 {
+            font-size: 75%;
+        }
+
+        .fontsize-080 {
+            font-size: 80%;
+        }
+
+        .fontsize-090 {
+            font-size: 90%;
+        }
     }
 }
