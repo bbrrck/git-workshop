@@ -82,34 +82,6 @@ git remote add origin https://github.com/bbrrck/zoo.git
 - Lokálny repozitár môže mať priradený aj viac ako jeden *remote*.
 
 
-## Odbočka: prihlásenie do Githubu
-
-- Aby mohol Git posielať dáta na Github, je potrebná autentifikácia
-- Prihlasovacie údaje sú spravované cez [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager) ktorý je súčasťou [Git for Windows](https://gitforwindows.org/). 
-
-::: {.columns}
-::: {.column width=50%}
-
-![](img/gh-win-auth/credential-helper-selector-v2.png){.gh-win-auth}
-:::
-
-::: {.column width=50%}
-![](img/gh-win-auth/auth-signin.png){.gh-win-auth}
-:::
-:::
-
-
-## Odbočka: prihlásenie do Githubu
-::: {.columns}
-::: {.column width=50%}
-![](img/gh-win-auth/auth-confirm.png){.gh-win-auth width=80%}
-:::
-
-::: {.column width=50%}
-![](img/gh-win-auth/auth-success.png){.gh-win-auth}
-:::
-:::
-
 ## Poslanie lokálnej kópie na *remote*
 - Príkaz `git push <remote> <branch>` "natlačí" lokálne zmeny z vetvy `branch` do vzdialeného repozitára `remote`:
 ```zsh
@@ -138,6 +110,29 @@ To https://github.com/bbrrck/test-repo-01.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
 ```
+
+
+## Odbočka: prihlásenie do Githubu
+
+- Aby mohol Git posielať dáta na Github, je potrebná autentifikácia
+- Najjednoduchší spôsob na správu prihlasovacích udajov: [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)  
+(je súčasťou [Git for Windows](https://gitforwindows.org/))
+- Konfigurácia sa začne automaticky po prvom spustení `git push`
+
+::: {.columns}
+::: {.column width=30%}
+![](img/gh-win-auth/credential-helper-selector-v2.png){.gh-win-auth}
+:::
+::: {.column width=25%}
+![](img/gh-win-auth/auth-signin.png){.gh-win-auth}
+:::
+::: {.column width=20%}
+![](img/gh-win-auth/auth-confirm.png){.gh-win-auth}
+:::
+::: {.column width=25%}
+![](img/gh-win-auth/auth-success.png){.gh-win-auth style="height:200px"}
+:::
+:::
 
 
 ## Zoznam vetiev
@@ -184,7 +179,14 @@ git pull
 
 ## Klonovanie existujúceho *remote* repozitára
 
-- Existujúci vzdialený repozitár môžeme naklonovať (vytvoriť lokálnu kópiu) pomocou `git clone`:
+- Existujúci vzdialený repozitár môžeme naklonovať pomocou `git clone`:
 ```zsh
-git clone https://github.com/kelseyhightower/nocode.git
+git clone <remote_url> <local_folder>
+```
+- Tento príkaz vytvorí kópiu repozitára z `remote_url` v adresári `local_folder`
+- Príklad:
+```zsh
+git clone https://github.com/bbrrck/zoo.git myzoo
+# alebo
+git clone https://github.com/bbrrck/zoo.git # naklonuje sa do adresára `zoo`
 ```
