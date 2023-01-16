@@ -1,6 +1,6 @@
 # Vetvy *(branches)*
 
-{{< include ../diagrams/section-branches.qmd >}}
+{{< include ../diagrams/section-4-branches.qmd >}}
 
 ## Čo je to vetva *(branch)* ?
 

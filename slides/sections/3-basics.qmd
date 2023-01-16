@@ -1,6 +1,6 @@
 # Základy Gitu
 
-{{< include ../diagrams/section-basics.qmd >}}
+{{< include ../diagrams/section-3-basics.qmd >}}
 
 ## Krok 0: Pracujeme s terminálom
 
