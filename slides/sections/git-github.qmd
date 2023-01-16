@@ -69,4 +69,4 @@
     - *Issues*, *Pull requests*, *Actions*, ...
 - podobné služby: [Gitlab](https://about.gitlab.com/), [Bitbucket](https://bitbucket.org/), [Azure DevOps](https://dev.azure.com/), a iné
 
-## {background-image="../img/github-screenshot.png" background-size="contain"}
+## {background-image="./img/github-screenshot.png" background-size="contain"}

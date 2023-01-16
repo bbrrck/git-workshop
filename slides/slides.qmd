@@ -2,34 +2,35 @@
 title: "Git workshop"
 subtitle: "Aj Ty v IT"
 author: "Tibor Stanko"
-date: "13.9.2022"
+date: "13.09.22"
 format:
     revealjs: 
-        mermaid-format: svg
-        highlight-style: gruvbox-dark
-        #highlight-style: gruvbox-light
-        theme: [simple, slides.scss]
-        width: 1920
-        height: 820
-        number-sections: true
-        number-depth: 1
-        # preview-links: true
-        # logo: logo.png
-        # chalkboard: true
-        toc: true
-        toc-depth: 1
-        toc-title: "Obsah"
-        # footer: "Git workshop - 13.9.2022"
+        #embed-resources: true
+        #standalone: true
+        auto-animate-easing: ease-in-out
+        auto-animate-unmatched: false
+        auto-animate-duration: 0.8
         center-title-slide: true
+        # chalkboard: true
         code-line-numbers: false
+        # footer: "Git workshop --- Aj Ty v IT --- Tibor Stanko --- 13.09.22"
+        height: 820
+        highlight-style: gruvbox-dark
+        # highlight-style: gruvbox-light
+        # logo: logo.png
+        mermaid-format: svg
+        number-depth: 1
+        number-sections: true
+        # preview-links: true
+        theme: [simple, slides.scss]
         title-slide-attributes:
             data-background-image: img/hero.svg
             data-background-size: 50%
             data-background-position: bottom
-            # footer: "."
-        auto-animate-easing: ease-in-out
-        auto-animate-unmatched: false
-        auto-animate-duration: 0.8
+        toc-depth: 1
+        toc-title: "Obsah"
+        toc: true
+        width: 1920
 ---
 
 {{< include sections/intro.qmd >}}

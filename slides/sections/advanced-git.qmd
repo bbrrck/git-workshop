@@ -1,16 +1,27 @@
 # Pokročilý Git
 
+## Pokročilý Git
 
-## `git log`
-
-
-## Interaktívne pridávanie zmien
 ```powershell
+# vypíš pomoc (dokumentáciu) ku danému príkazu -- napr. git commit
+git commit --help # alebo `git commit -h`
+
+# ineraktívne pridaj zmeny
 git add --interactive # alebo `git add -i`
+
+# prispôb výstup z git logu 
+git log --all --oneline --graph --decorate
+
+# alebo:
+git config --global alias.nicelog "log --all --graph --decorate --oneline"
+git nicelog
+
+# zisti kto spravil poslednú zmenu v každom riadku
+git blame
+
+# dočasne vymaž zmeny vo working directory
+git stash
+
+# špecifikuj ktoré súbory má git ignorovať
+.gitignore
 ```
-
-
-## `git blame`
-
-
-## `.gitignore`

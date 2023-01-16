@@ -1,26 +1,6 @@
 # Základy Gitu
-```{mermaid}
-%%| fig-width: 6.5
-%%{
-    init: { 
-        'logLevel': 'debug', 
-        'theme': 'base', 
-        'gitGraph': {
-            'showCommitLabel': true, 
-            'showBranches': false, 
-            'mainBranchName': 'main',
-            'rotateCommitLabel': true
-        } 
-    } 
-}%%
-    gitGraph
-        checkout main
-        commit id:"version 1"
-        commit id:"version 2"
-        commit id:"version 3"
-        commit id:"version 4"
-```
 
+{{< include ../diagrams/section-basics.qmd >}}
 
 ## Krok 0: Pracujeme s terminálom
 
@@ -30,7 +10,7 @@
 
 . . .
 
-::: {.fontsize-070}
+::: {.fontsize-080}
 - Základné príkazy na navigáciu v termináli:
     - `pwd` --- vypíš aktuálny adresár
     - `cd folder` --- zmeň aktuálny adresár na `folder`
@@ -51,7 +31,7 @@
     - cez [klasický inštalátor](https://git-scm.com/download/win)
     - cez [scoop](https://scoop.sh/) (odporúčam) --- v PowerShell spustite nasledovné príkazy:
 
-::: {.fontsize-070}
+::: {.fontsize-080}
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh | iex # inštalácia scoopu
@@ -99,7 +79,7 @@ Initialized empty Git repository in C:/Users/tibor.stanko/hello/.git/
 ```
 
 
-## Krok 4: Uloženie verzie
+## Krok 4: Uloženie verzie {auto-animate="true" auto-animate-easing="ease-in-out"}
 
 Uloženie verzie prebieha v dvoch krokoch.
 
@@ -112,10 +92,12 @@ git add hello.py
 ```powershell
 git commit -m "Add hello.py"
 ```
+
 <!-- ![](https://rogerdudler.github.io/git-guide/img/trees.png) -->
 
 
-## Krok 4: Uloženie verzie
+## Krok 4: Uloženie verzie {auto-animate="true" auto-animate-easing="ease-in-out"}
+
 - Popis záznamu *(commit message)* je väčšinou krátka jednoriadková správa ktorá sa špecifikuje cez argument `-m "commit message"`
 
 - Ak chceme napísať dlhší popis, argument `-m` vynecháme. `git commit` vtedy otvorí textový editor v ktorom popis napíšeme. 
@@ -125,11 +107,12 @@ git commit -m "Add hello.py"
 git config --global core.editor notepad
 ```
 
-
-## Krok 4: Uloženie verzie
+## Krok 4: Uloženie verzie {auto-animate="true" auto-animate-easing="ease-in-out"}
 - Je **dôležité** písať dobré *commit messages*! 
 
+::: {.center}
 ![](https://imgs.xkcd.com/comics/git_commit_2x.png)
+:::
 
 
 ## Krok 5: Kontrola stavu repozitára
