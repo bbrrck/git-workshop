@@ -1,8 +1,68 @@
 # Vzdialené repozitáre *(remotes)*
 
 
-## Vytvorenie repozitára na Githube
-::: {.todo}
+## Čo je to vzdialený repozitár *(remote)?*
+- Doteraz sme pracovali s **lokálnym** Git repozitárom ktorý je uložený na našom počítači
+
+- **Vzdialený repozitár** *(remote)* je uložený na Internete --- presnejšie, na webovom serveri  
+*napr. github.com, firemný server, univerzitný server, ...*
+
+::: {.fragment}
+- Existujú dva typy *remote* repozitárov:
+    a. **verejný** *(public)* repozitár je zdieľaný so všetkými používateľmi s prístupom na server
+    b. **súkromný** *(private)* repozitár je zdieľaný iba s vybranými používateľmi
+:::
+
+
+## Načo slúžia vzdialené repozitáre?
+1. **Zálohovanie** kódu
+2. **Zdieľanie** kódu
+3. **Synchronizácia** kódu v tíme
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
+::: {style="padding:0; margin:0;"}
+<img style="margin-top: 10px;" id="image-to-animate" src="./img/gh-new-repo/gh-new-full.png" />
+:::
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
+::: {style="padding:0; margin:0;"}
+<img style="margin-top: -500px" id="image-to-animate" src="./img/gh-new-repo/gh-new-full.png" />
+:::
+
+::: {data-id="arrow" .fragment .absolute left=1000 bottom=500 .arrow-pointer}
+←
+:::
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
+::: {style="padding:0; margin:0;"}
+<img style="margin-top: -500px" id="image-to-animate" src="./img/gh-new-repo/gh-new-full.png" />
+:::
+
+::: {data-id="arrow" .absolute left=700 bottom=250 .arrow-pointer}
+←
+:::
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
+::: {style="padding:0; margin:0;"}
+<img style="margin-top: -500px" id="image-to-animate" src="./img/gh-new-repo/gh-new-full.png" />
+:::
+
+::: {data-id="arrow" .absolute left=900 bottom=-40 .arrow-pointer}
+←
+:::
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
+::: {style="padding:0; margin:0;"}
+<img style="margin-top: -1400px" id="image-to-animate" src="./img/gh-new-repo/gh-new-full.png" />
+:::
+
+::: {data-id="arrow" .absolute left=420 bottom=-150 .arrow-pointer}
+←
 :::
 
 
@@ -25,7 +85,7 @@ branch 'main' set up to track 'origin/main'.
 ```
 
 
-## Stiahnutie vzdialených zmien do lokálneho repozitára
+## Stiahnutie *remote* zmien do lokálu
 ::: {.todo}
 :::
 
