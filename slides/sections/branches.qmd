@@ -9,7 +9,7 @@
 - Doteraz sme pracovali na vetve `main`, ktorú automaticky vytvoril `git init`
 
 - Zoznam vetiev si môžeme pozrieť cez príkaz `git branch`:
-```powershell
+```sh
 >> git branch
 * main
 ```
@@ -25,33 +25,36 @@ V Gite je prednastavená hlavná vetva `master`. Tento názov sa v posledných r
 - Príkladom je situácia keď vytvárame novú funkcionalitu (vetva A), a vyskytne sa bug ktorý musí byť hneď opravený (vetva B)
 - Vďaka Gitu môže práca na týchto dvoch vetvách prebiehať nezávisle
 
+::: {.todo}
+rewrite/improve second bullet
+:::
 
 ## Vytvorenie vetvy *(branch)*
 
-- Na vytvorenie novej vetvy zavoláme:
-```powershell
+- Na vytvorenie novej vetvy s názvom `french` zavoláme
+```sh
 git branch french
 ```
 
 - Ak sa chceme prepnúť na novú vetvu:
-```powershell
+```sh
 git checkout french
 ```
 
 - Tieto dve operácie sa veľmi často robia spolu, preto existuje skratka:
-```powershell
+```sh
 git checkout -b slovak # vytvor vetvu 'slovak' a prepni sa na ňu
 ```
 
 
 ## Zlučovanie vetiev *(merge)*
 
-- Ak chceme pridať zmeny spravené na vetve `slovak` do hlavnej vetvy `main`, prepneme sa na hlavnú vetvu:
-```powershell
+- Ak chceme pridať zmeny spravené na vetve `slovak` do hlavnej vetvy `main`, prepneme sa najprv na hlavnú vetvu:
+```sh
 git checkout main
 ```
 - Na zlučovanie vetiev použijeme príkaz `git merge`:
-```powershell
+```sh
 git merge slovak
 ```
 
@@ -89,15 +92,29 @@ Auto-merging hello.py
 CONFLICT (content): Merge conflict in hello.py
 Automatic merge failed; fix conflicts and then commit the result.
 ```
-- Po zlúčení je potrebné pridať zmenené súbory do novej verzie:
-```powershell
+- Po manuálnom zlúčení je potrebné pridať zmenené súbory do novej verzie:
+```sh
 git add hello.py
 git commit -m "Merged branch 'french'"
 ```
 
+## Vymazanie vetvy *(delete)*
+- Ak po zlúčení vetvu už nepotrebujeme, môžeme ju vymazať cez `git branch --delete`, skrátene `git branch -d`.
+```sh
+git branch -d comment
+```
+
+::: {.warning .fragment .fade-in}  
+Po vymazaní je vetva odstránená z histórie a nie je možné ju obnoviť.
+:::
 
 ## Príklad `git log` histórie
-```sh
+
+::: {.todo}
+add mermaid diagram for this git log output
+:::
+
+```changelog
 *   3a5d22e (HEAD -> main) Merge branch 'french'
 |\
 | * 21c7ab7 (french) Add french functionality
@@ -114,14 +131,23 @@ git commit -m "Merged branch 'french'"
 ## {background-image="img/git-conflict-vs-code-gui.png" background-size="contain"}
 
 
-## Úlohy (2)
-1. Prepnite sa vo svojom lokálnom repozitári na novú vetvu `animals`.
-2. Vytvorte v repozitári nový súbor `zvierata.txt` s nasledovným obsahom:
-```powershell
+## Úlohy (2) {.exercise}
+
+::: {.fontsize-090}
+1. Vo svojom lokálnom repozitári sa prepni na novú vetvu `animals`
+2. Vytvor v repozitári nový súbor `zoo.txt` s nasledovným obsahom:
+
+::: {.fontsize-070}
+```changelog
 panda
 slon
 lev
 zirafa
 ```
-3. Vytvorte novú verziu ktorá bude obsahovať `zvierata.txt`.
-4. Zlúčte zmeny spravené na vetve `animals` do vetvy `main`.
+:::
+3. Ulož novú verziu ktorá bude obsahovať `zoo.txt`
+4. Zlúč zmeny spravené na vetve `animals` do vetvy `main` a vymaž vetvu `animals`
+5. Na novej vetve `tiger` zmeň riadok `lev` na `tiger` a ulož novú verziu.
+6. Prepni sa na vetvu `main`, oprav riadok `zirafa` na `žirafa` a ulož novú verziu
+7. Zlúč zmeny z vetvy `tiger` s vetvou `main`
+:::
