@@ -3,13 +3,22 @@
 // $body-bg: #191919;
 // $body-color: #fff;
 // $link-color: #42affa;
-$code-block-font-size: 1.0em;
+$code-block-font-size: 0.8em;
 
 /*-- scss:rules --*/
 
 .reveal .slide {
+
     div.sourceCode {
-        margin: 0.25em 0 0.5em;
+        margin: 0.1em 0 0.25em;
+    }
+
+    code {
+        display: inline-block;
+        padding: 0 0.25em;
+        margin: 0 0.25em;
+        background-color: #f4e7c9;
+        color: #282828;
     }
 
     h2+div.sourceCode {
@@ -26,7 +35,23 @@ $code-block-font-size: 1.0em;
         margin: 0;
     }
 
-    .column.smaller {
+    .column.git-slovnik {
+        font-size: 90%;
+    }
+
+    .fontsize-070 {
+        font-size: 70%;
+    }
+
+    .fontsize-075 {
+        font-size: 75%;
+    }
+
+    .fontsize-080 {
+        font-size: 80%;
+    }
+
+    .fontsize-090 {
         font-size: 90%;
     }
 }
