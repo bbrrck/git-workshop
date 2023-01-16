@@ -156,6 +156,46 @@ $code-block-font-size: 0.8em;
             color: #282828;
         }
 
+        pre.markdown-source {
+            color: #f4e7c9;
+            background-color: #282828;
+            padding: 0.5em;
+            width: 90%;
+            font-size: 60%;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .markdown-preview {
+            font-size: 60%;
+            text-align: left;
+
+            img {
+                width: 240px;
+                // max-width: 100px !important;
+            }
+
+            * {
+                margin-left: 0 !important;
+                text-align: left;
+            }
+
+            h3 {
+                font-size: 200%;
+            }
+
+            h4 {
+                font-size: 160%;
+            }
+
+            h5 {
+                font-size: 125%;
+            }
+        }
+
         // pre.plaintext code {
         //     background-color: #282828;
         //     color: #f4e7c9;
