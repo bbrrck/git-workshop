@@ -2,8 +2,9 @@
 **/*_files
 **/*.html
 **/.ipynb
+**/.quarto/
+**/_site/
+**/_output/
 
 # WSL VS Code
 *:Zone.Identifier
-
-/.quarto/
