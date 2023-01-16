@@ -157,11 +157,6 @@ Niektoré systémy na kontrolu verzií fungujú tak že vytvoria novú verziu zo
 
 :::
 
-## `git diff`
-::: {.todo}
-add a section talking about `git diff` and its usage 
-:::
-
 
 ## Úlohy (1) {.exercise #exercise-1-basics}
 
