@@ -20,11 +20,9 @@ format:
             data-background-image: img/hero.svg
             data-background-size: 50%
             data-background-position: bottom
-        toc-depth: 1
-        toc-title: "Obsah"
-        toc: true
-        # transition: fade
-        # transition-speed: fast
+        toc: false
+        # toc-depth: 1
+        # toc-title: "Obsah"
         width: 1920
 ---
 {{< include sections/1-intro.qmd >}}
@@ -36,3 +34,20 @@ format:
 <!-- {{< include sections/7-markdown.qmd >}} -->
 {{< include sections/8-links.qmd >}}
 {{< include sections/9-thanks.qmd >}}
+
+<!-- 
+
+TODO NOTES:
+- Overall
+-- ESTIMATE TIME BUDGET FOR EACH SECTION AND FOR EXERCISES
+- Section 2
+-- move "Git slovnik" to the end
+- Section 3
+-- add section about git diff
+- Section 4
+-- na co su dobre vetvy - improve
+-- delete warning: do not show as fragment
+-- git log -- add diagram
+
+
+ -->

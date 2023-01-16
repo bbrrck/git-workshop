@@ -25,16 +25,9 @@ git add -i
 ```zsh
 # prispôb výstup z git logu 
 git log --all --oneline --graph --decorate
-
-# alebo:
+# alebo
 git config --global alias.nicelog "log --all --graph --decorate --oneline"
 git nicelog
-```
-
-## `git blame`
-```zsh
-# zisti kto spravil poslednú zmenu v každom riadku
-git blame
 ```
 
 ## `git stash`
@@ -43,4 +36,10 @@ git blame
 git stash
 # obnov odstránené zmeny
 git stash pop
+```
+
+## `git blame`
+```zsh
+# zisti kto spravil poslednú zmenu v každom riadku
+git blame
 ```

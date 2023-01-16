@@ -1,4 +1,4 @@
-# Git a Github
+# Git a Github {#git-github}
 
 ## Čo je to Git?
 

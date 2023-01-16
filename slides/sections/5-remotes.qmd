@@ -192,7 +192,7 @@ git clone https://github.com/bbrrck/zoo.git # naklonuje sa do adresára `zoo`
 ```
 
 
-## Úlohy (3) {.exercise}
+## Úlohy (3) {.exercise #exercise-3-remotes}
 
 ::: {.fontsize-090 }
 1. Vytvor si na Githube repo s názvom `zoo`

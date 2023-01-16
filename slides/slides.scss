@@ -59,6 +59,12 @@ $code-block-font-size: 0.8em;
 
     .slide {
 
+        .nobullets {
+            ul {
+                list-style-type: none;
+            }
+        }
+
         .gh-win-auth {
             width: 100%;
             height: 400px;
