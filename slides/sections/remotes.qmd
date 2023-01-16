@@ -14,7 +14,7 @@
 :::
 
 
-## Načo slúžia vzdialené repozitáre?
+## Na čo slúžia vzdialené repozitáre?
 1. **Zálohovanie** kódu
 2. **Zdieľanie** kódu
 3. **Synchronizácia** kódu v tíme
@@ -22,13 +22,13 @@
 
 ## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
 ::: {style="padding:0; margin:0;"}
-<img style="margin-top: 10px;" id="image-to-animate" src="./img/gh-new-repo/gh-new-full.png" />
+<img style="margin-top: 10px;" src="./img/gh-new-repo/gh-new-full.png" />
 :::
 
 
 ## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
 ::: {style="padding:0; margin:0;"}
-<img style="margin-top: -500px" id="image-to-animate" src="./img/gh-new-repo/gh-new-full.png" />
+<img style="margin-top: -500px" src="./img/gh-new-repo/gh-new-full.png" />
 :::
 
 ::: {data-id="arrow" .fragment .absolute left=1000 bottom=500 .arrow-pointer}
@@ -38,7 +38,7 @@
 
 ## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
 ::: {style="padding:0; margin:0;"}
-<img style="margin-top: -500px" id="image-to-animate" src="./img/gh-new-repo/gh-new-full.png" />
+<img style="margin-top: -500px" src="./img/gh-new-repo/gh-new-full.png" />
 :::
 
 ::: {data-id="arrow" .absolute left=700 bottom=250 .arrow-pointer}
@@ -48,7 +48,7 @@
 
 ## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
 ::: {style="padding:0; margin:0;"}
-<img style="margin-top: -500px" id="image-to-animate" src="./img/gh-new-repo/gh-new-full.png" />
+<img style="margin-top: -500px" src="./img/gh-new-repo/gh-new-full.png" />
 :::
 
 ::: {data-id="arrow" .absolute left=900 bottom=-40 .arrow-pointer}
@@ -58,12 +58,37 @@
 
 ## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
 ::: {style="padding:0; margin:0;"}
-<img style="margin-top: -1400px" id="image-to-animate" src="./img/gh-new-repo/gh-new-full.png" />
+<img style="margin-top: -1400px" src="./img/gh-new-repo/gh-new-full.png" />
 :::
 
 ::: {data-id="arrow" .absolute left=420 bottom=-150 .arrow-pointer}
 ←
 :::
+
+## (nič)
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
+::: {style="padding:0; margin:0;"}
+<img style="margin-top: 0px;" src="./img/gh-new-repo/gh-new-empty-repo.png" />
+:::
+
+
+## Vytvorenie repozitára na Githube --- [github.com/new](https://github.com/new) {auto-animate=true}
+::: {style="padding:0; margin:0;"}
+<img style="margin-top: -500px;" src="./img/gh-new-repo/gh-new-empty-repo.png" />
+:::
+
+
+## Nastavenie *remote* v lokálnom repozitári 
+
+- Na nastavenie vzdialeného repozitára použijeme príkaz `git remote add <name> <url>`:
+```sh
+git remote add origin https://github.com/bbrrck/zoo.git
+```
+- `name` je meno ktoré bude Git používať na referencovanie vzdialeného repozitára na adrese `url`. Môže byť ľubovoľné; bežne sa stretneme s menom `origin`.
+- Lokálny repozitár môže mať priradený aj viac ako jeden *remote*.
+
 
 
 ## Poslanie lokálnej kópie na *remote*
