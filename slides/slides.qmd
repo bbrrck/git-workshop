@@ -2,7 +2,7 @@
 title: "Git workshop"
 subtitle: "Aj Ty v IT"
 author: "Tibor Stanko"
-date: "18.10.22"
+date: "07.12.22"
 format:
     revealjs: 
         embed-resources: true
