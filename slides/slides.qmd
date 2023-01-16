@@ -82,22 +82,22 @@ format:
 
 | en | sk |
 |---|---|
-| *branch* | vetva |
-| *clone* | naklonovanie repozitára |
-| *commit* | záznam, zaznamenanie |
-| *commit message* | popis záznamu |
-| *conflict* | konflikt medzi verziami |
+| *branch*              | vetva |
+| *clone*               | naklonovanie repozitára |
+| *commit*              | záznam, zaznamenanie |
+| *commit message*      | popis záznamu |
+| *conflict*            | konflikt medzi verziami |
 | *conflict resolution* | riešenie konfliktov |
-| *diff* | rozdiel medzi verziami |
-| *merge* | zlúčenie vetiev |
-| *pull* | stiahnutie *remote* zmien |
-| *push* | odoslanie lokálnych zmien |
-| *repository* | repozitár, úložisko |
-| *remote* | vzdialený repozitár |
-| *snapshot* | snímok |
-| *staging area* | prípravná oblasť (tiež *index*) |
-| *status* | stav repozitára |
-| *version* | verzia |
+| *diff*                | rozdiel medzi verziami |
+| *merge*               | zlúčenie vetiev |
+| *pull*                | stiahnutie *remote* zmien |
+| *push*                | odoslanie lokálnych zmien |
+| *repository*          | repozitár, úložisko |
+| *remote*              | vzdialený repozitár |
+| *snapshot*            | snímok |
+| *staging area*        | prípravná oblasť (tiež *index*) |
+| *status*              | stav repozitára |
+| *version*             | verzia |
 
 :::
 
@@ -105,7 +105,26 @@ format:
 
 # Pracujeme s Gitom: základy
 
+## Krok 0: PowerShell
+
+
 ## Krok 1: Inštalácia Gitu
+
+Vo **Windowse** existuje viacero spôsobov ako nainštalovať Git, napr.
+
+- cez [scoop](https://scoop.sh/) (odporúčam): v PowerShell spustite nasledovné príkazy:
+```powershell
+# inštalácia scoopu
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
+
+# inštalácia gitu
+scoop install git
+```
+- cez klasický [inštalátor](https://git-scm.com/download/win)
+
+Inštrukcie pre **macOS** a **Linux** sú k dispozícii na oficiálnej stránke [v angličtine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) alebo [v češtine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+
 
 ## Krok 2: Nastavenie Gitu
 
@@ -113,6 +132,7 @@ format:
 git --version
 git config --global user.name "Tibor Stanko"
 git config --global user.email "tibor.stanko@zurich.com"
+git config --global init.defaultBranch main
 ```
 
 ## Krok 3: Vytvorenie repozitára
@@ -136,16 +156,35 @@ git commit -m "pridal som test.txt"
 1. Sprav z adresára `git-workshop` Git repozitár 
 1. Vytvor v adresári súbor `test.txt` s obsahom `Ahoj Aj Ty v IT!`
 1. Pridaj `test.txt` do ďalšej verzie
-1. Ulož novú verziu s pou
+1. Ulož novú verziu
+
+# Vzdialené repozitáre
+
+## Git push
+
+```powershell
+PS C:\Users\tibor.stanko\repo> git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 241 bytes | 120.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/bbrrck/test-repo-01.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+```
 
 
 # Užitočné zdroje
+
+## Dokumentácia
 - [Oficiálna stránka](https://git-scm.com) a [dokumentácia](https://git-scm.com/doc) Gitu
-- [Pro Git](https://git-scm.com/book/en/v2), voľne dostupná kniha k dispozícii čiastočne aj [v češtine](https://git-scm.com/book/cs/v2)
-- [Git a Github od základov](https://www.youtube.com/watch?v=0v5K4GvK4Gs): videokurz od Yablka
+- [Pro Git](https://git-scm.com/book/en/v2), voľne dostupná oficiálna kniha, k dispozícii čiastočne aj [v češtine](https://git-scm.com/book/cs/v2)
+
+## Kurzy
+- videokurz v slovenčine od Yablka: [Git a Github od základov](https://www.youtube.com/watch?v=0v5K4GvK4Gs)
+- kurz v slovenčine na FEI TUKE, časti [Systémy pre správu verzií](https://kurzy.kpi.fei.tuke.sk/zsi/labs/02-git.html) a [Práca s vetvami v systéme Git](https://kurzy.kpi.fei.tuke.sk/zsi/labs/03-git.html)
+- [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 - Coursera: [Introduction to Git and GitHub](https://www.coursera.org/learn/introduction-git-github/)
 - Missing Semester of CS Education, [Lecture 6: Version Control (git)](https://www.youtube.com/watch?v=2sjqTHE0zok)
-- [git - the simple guide](https://rogerdudler.github.io/git-guide/)
 - [Learn how Git works internally with simple diagrams](https://medium.com/@praveenmuth2/learn-how-git-works-internally-with-simple-diagrams-a9349dc32831): článok s diagramami na pochopoenie toho ako fungujú Git príkazy
 - [Atlassian Git tutorial](https://www.atlassian.com/git/tutorials)
-- Kurz na ZSI na FEI TUKE: časti [Systémy pre správu verzií](https://kurzy.kpi.fei.tuke.sk/zsi/labs/02-git.html) a [Práca s vetvami v systéme Git](https://kurzy.kpi.fei.tuke.sk/zsi/labs/03-git.html)
