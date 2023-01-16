@@ -27,12 +27,12 @@ format:
         # transition-speed: fast
         width: 1920
 ---
-{{< include sections/intro.qmd >}}
-{{< include sections/git-github.qmd >}}
-{{< include sections/basics.qmd >}}
-{{< include sections/branches.qmd >}}
-{{< include sections/remotes.qmd >}}
-{{< include sections/advanced-git.qmd >}}
-{{< include sections/markdown.qmd >}}
-{{< include sections/links.qmd >}}
-{{< include sections/thanks.qmd >}}
+{{< include sections/1-intro.qmd >}}
+{{< include sections/2-git-github.qmd >}}
+{{< include sections/3-basics.qmd >}}
+{{< include sections/4-branches.qmd >}}
+{{< include sections/5-remotes.qmd >}}
+{{< include sections/6-advanced-git.qmd >}}
+{{< include sections/7-markdown.qmd >}}
+{{< include sections/8-links.qmd >}}
+{{< include sections/9-thanks.qmd >}}
