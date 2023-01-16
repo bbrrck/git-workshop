@@ -141,6 +141,9 @@ format:
 - dve možnosti ako spustiť PowerShell:
     a. vyhľadajte "powershell" cez štartové menu 
     b. stlačte `⊞ Win + R`, do okna napíšte "powershell" a stlačte OK
+- voliteľné nástroje pre lepšiu použiteľnosť:
+    - [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=en-us&gl=us)
+    - [Oh My Posh](https://ohmyposh.dev/): prompt theme engine
     
 ::: {.notes}
 - aby sme lepšie pochopili ako Git funguje, budeme na začiatku spúšťať Git príkazy cez konzolu (terminál)
