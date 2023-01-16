@@ -107,7 +107,7 @@ format:
 ::: {.column width="50%" .git-slovnik}
 | en | sk |
 |---|---|
-| *pull*                | stiahnutie *remote* zmien |
+| *pull*                | stiahnutie vzdialených zmien |
 | *push*                | odoslanie lokálnych zmien |
 | *repository*          | repozitár, úložisko |
 | *remote*              | vzdialený repozitár |
@@ -132,7 +132,7 @@ format:
 ## {background-image="img/github-screenshot.png" background-size="contain"}
 
 # Základy Gitu
-```{mermaid}
+<!-- ```{mermaid}
 %%| fig-width: 6.5
 %%{
     init: { 
@@ -140,17 +140,19 @@ format:
         'theme': 'base', 
         'gitGraph': {
             'showCommitLabel': true, 
-            'showBranches': true, 
-            'mainBranchName': 'main'
+            'showBranches': false, 
+            'mainBranchName': 'main',
+            'rotateCommitLabel': true
         } 
     } 
 }%%
     gitGraph
         checkout main
-        commit id:"v1"
-        commit id:"v2"
-        commit id:"v3"
-```
+        commit id:"version 1"
+        commit id:"version 2"
+        commit id:"version 3"
+        commit id:"version 4"
+``` -->
 
 
 ## Krok 0: Pracujeme s terminálom
@@ -176,6 +178,7 @@ format:
 
 :::
 
+
 ## Krok 1: Inštalácia Gitu
 
 - Vo **Windowse** existuje viacero spôsobov ako nainštalovať Git, napr.
@@ -190,16 +193,17 @@ scoop install git # inštalácia gitu
 ```
 :::
 
-- **macOS** a **Linux**: inštrukcie na oficiálnej stránke [v angličtine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) alebo [v češtine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- Inštrukcie pre **macOS** alebo **Linux** sú na oficiálnej stránke [v angličtine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) aj [v češtine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 
-## Krok 2: Nastavenie Gitu {auto-animate="true"}
+
+## Krok 2: Nastavenie Gitu
 
 - Skontrolujme či je Git správne nainštalovaný:
 ```powershell
 git --version
 ```
 
-- Predtým ako začneme pracovať s Gitom, je potrebné nastaviť si meno a email. Tieto údaje bude Git používať na priradenie autora k verzii.
+- Predtým ako začneme pracovať s Gitom, je potrebné nastaviť si meno a email cez príkaz `git config`. Tieto údaje bude Git používať na priradenie autora k verzii.
 ```powershell
 git config --global user.name "Tibor Stanko"
 git config --global user.email "tibor.stanko@zurich.com"
@@ -210,42 +214,71 @@ git config --global user.email "tibor.stanko@zurich.com"
 git config --global init.defaultBranch "main"
 ```
 
+
 ## Krok 3: Vytvorenie Git repozitára
 
 - Prepneme sa do adresára z ktorého chceme spraviť repozitár:
-
 ```powershell
-cd ~\awesome-project
+cd ~\hello
 ```
 
 - Príkaz `git init` slúži na vytvorenie Git repozitára v aktuálnom adresári:
-
 ```powershell
 git init
 ```
 
 - Po spustení príkazu Git vypíše:
 ```markdown
-Initialized empty Git repository in C:/Users/tibor.stanko/awesome-project/.git/
+Initialized empty Git repository in C:/Users/tibor.stanko/hello/.git/
 ```
 
 
 ## Krok 4: Uloženie verzie
-- Uloženie verzie prebieha v dvoch krokoch
 
-    1. Cez `git add` označíme zmeny ktoré majú byť pridané do novej verzie
+Uloženie verzie prebieha v dvoch krokoch.
+
+1. Cez `git add` označíme zmeny ktoré majú byť pridané do novej verzie:
 ```powershell
-git add awesome-function.py
+git add hello.py
 ```
-    2. Zavolaním `git commit` vytvoríme novú verziu
+
+2. Cez `git commit` vytvoríme záznam o novej verzii:
 ```powershell
-git commit -m "pridal som awesome-function.py"
+git commit -m "Add hello.py"
 ```
+<!-- ![](https://rogerdudler.github.io/git-guide/img/trees.png) -->
+
+
+## Krok 4: Uloženie verzie
+- Popis záznamu *(commit message)* je väčšinou krátka jednoriadková správa ktorá sa špecifikuje cez argument `-m "commit message"`
+
+- Ak chceme napísať dlhší popis, argument `-m` vynecháme. `git commit` vtedy otvorí textový editor v ktorom popis napíšeme. 
+
+- V Gite na Windowse je na písanie *commit message* predvolený editor `vim`, ktorý beží priamo v termináli. Ak nemáte skúsenosti s používaním vimu, môžete si editor zmeniť napr. na `notepad`:
+```powershell
+git config --global core.editor notepad
+```
+
+
+## Krok 5: Kontrola stavu repozitára
 
 - Aktuálny stav repozitára môžeme skontrolovať cez `git status` 
 ```powershell
-git status # alebo `git status -s` pre skrátený výpis
+>> git status  # prípadne `git status -s` pre skrátený výpis
+On branch main
+nothing to commit, working tree clean
 ```
+
+- Cez príkaz `git log` sa môžeme presvedčiť o tom že záznam bol vytvorený:
+```js
+>> git log
+commit bf5c9b4a320012b422546fcb86f5b957104bea55 (HEAD -> main)
+Author: Tibor Stanko <tibor.stanko@gmail.com>
+Date:   Tue Sep 13 17:00:00 2022 +0200
+
+    Add hello.py
+``` 
+
 
 ::: {.notes}
 Niektoré systémy na kontrolu verzií fungujú tak že vytvoria novú verziu zo všetkých aktuálnych súborov v repozitári. Tento spôsob ukladania záloh môže byť nevýhodný. Príkladom je situácia keď sme v repozitári implementovali dve nezávislé funkcie, a chceme ich zachytiť v dvoch rozdielnych verziách. V Gite preto existuje koncept prípravnej zóny (*staging area*), vďaka ktorej máme kontrolu nad tým ktoré zmeny budú a ktoré nebudú pridané do nasledujúcej verzie.
@@ -262,26 +295,81 @@ Niektoré systémy na kontrolu verzií fungujú tak že vytvoria novú verziu zo
 
 # Vetvy *(branches)*
 
+<!-- ```{mermaid}
+%%{
+    init: { 
+        'logLevel': 'debug', 
+        'theme': 'base', 
+        'themeVariables': {
+
+        },
+        'gitGraph': {
+            'showCommitLabel': false, 
+            'showBranches': false, 
+            'mainBranchName': 'main'
+        } 
+    } 
+}%%
+    gitGraph
+        checkout main
+        commit
+        commit
+        branch bugfix
+        branch feature
+        checkout bugfix
+        commit
+        commit
+        checkout feature
+        commit
+        commit
+        commit
+        commit
+        checkout main
+        merge bugfix
+        merge feature
+``` -->
+
+
 ## Čo je to vetva *(branch)* ?
 
-- doteraz sme pracovali na vetve s názvom *main* (historický názov *master*)
+- Vetvy slúžia na vybočenie z hlavnej línie a pokračovanie v práci bez zásahu do nej
+- Doteraz sme pracovali na vetve `main`, ktorú automaticky vytvoril `git init`
 
+- Zoznam vetiev si môžeme pozrieť cez príkaz `git branch`:
+```powershell
+>> git branch
+* main
+```
+
+::: {.fontsize-070}
+V Gite je prednastavená hlavná vetva `master`. Tento názov sa v posledných rokoch [stal kontroverzným](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) a postupne sa [prestáva používať](https://github.blog/changelog/2020-10-01-the-default-branch-for-newly-created-repositories-is-now-main/). Preto sme pri [nastavovaní Gitu](#/krok-2-nastavenie-gitu) zmenili `init.defaultBranch` na `main`.
+:::
 
 ## Načo sú dobré vetvy?
 
+::: {.todo}
+:::
+
 ## Vytvorenie vetvy *(branch)*
+
+- Na vytvorenie novej vetvy zavoláme
 ```powershell
-git branch dog
-git checkout dog
+git branch slovak
 ```
 
-alebo
-
+- Ak sa chceme prepnúť na novú vetvu:
 ```powershell
-git checkout -b dog
+git checkout slovak
+```
+
+- Táto operácia je veľmi častá, preto existuje skratka:
+```powershell
+git checkout -b slovak # vytvor vetvu 'slovak' a prepni sa na ňu
 ```
 
 ## Zlučovanie vetiev *(merge)*
+::: {.todo}
+:::
 
 ```powershell
 git checkout main
@@ -289,6 +377,9 @@ git merge dog
 ```
 
 ## Riešenie *merge* konfliktov
+::: {.todo}
+:::
+
 ```powershell
 git merge cat
 # (!)
@@ -302,18 +393,26 @@ git add animals.py
 git commit -m "merged dog and cat features"
 ```
 
+## {background-image="img/git-conflict-vs-code-gui.png" background-size="contain"}
+
+<!-- ## Riešenie *merge* konfliktov -->
+<!-- ![](img/git-conflict-vs-code-gui.png) -->
+
 # Vzdialené repozitáre *(remote)*
 
 ## Vytvorenie repozitára na Githube
+::: {.todo}
+:::
 
 ## Poslanie lokálnej kópie na *remote*
+::: {.todo}
+:::
 
 ```powershell
 git push -u origin main
 ```
 
-```powershell
-PS C:\Users\tibor.stanko\repo> git push -u origin main
+```markdown
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 241 bytes | 120.00 KiB/s, done.
@@ -324,6 +423,10 @@ branch 'main' set up to track 'origin/main'.
 ```
 
 ## Klonovanie existujúceho *remote* repozitára
+
+::: {.todo}
+:::
+
 ```powershell
 git clone https://github.com/bbrrck/animals.git
 ```
@@ -339,7 +442,13 @@ git add --interactive # alebo `git add -i`
 
 ## `git blame`
 
+## `.gitignore`
+
 # Markdown rýchlokurz
+
+::: {.todo}
+:::
+
 
 # Užitočné zdroje
 
@@ -361,3 +470,5 @@ git add --interactive # alebo `git add -i`
 - Missing Semester of CS Education, [Lecture 6: Version Control (git)](https://www.youtube.com/watch?v=2sjqTHE0zok)
 - [Learn how Git works internally with simple diagrams](https://medium.com/@praveenmuth2/learn-how-git-works-internally-with-simple-diagrams-a9349dc32831)
 - [Atlassian Git tutorial](https://www.atlassian.com/git/tutorials)
+
+# Ďakujem za pozornosť!
