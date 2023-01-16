@@ -23,7 +23,9 @@ $code-block-font-size: 0.8em;
 
 .reveal {
     #title-slide {
-        .title {}
+        .title {
+            color: rgb(25, 124, 131);
+        }
 
         .subtitle {
             font-style: italic;
@@ -57,8 +59,13 @@ $code-block-font-size: 0.8em;
 
     .slide {
 
-        .warning,
-        .todo {
+        .before-1em {
+            margin-top: 1em;
+        }
+
+        .myinfo,
+        .todo,
+        .warning {
             margin: 1em 0;
             padding: 0.5em 1em;
             border-radius: 50px;
@@ -69,16 +76,17 @@ $code-block-font-size: 0.8em;
             }
 
             &:before {
-                font-weight: bold;
+                font-style: normal;
+                display: inline-block;
             }
         }
 
-        .warning {
-            color: #c00;
-            background-color: rgb(236, 207, 207);
+        .myinfo {
+            color: rgb(8, 68, 60);
+            background-color: rgb(216, 236, 225);
 
             &:before {
-                content: "Pozor! ";
+                content: "🚀 ";
             }
         }
 
@@ -87,7 +95,17 @@ $code-block-font-size: 0.8em;
             background-color: rgb(233, 207, 236);
 
             &:before {
-                content: "ToDo: ";
+                font-weight: bold;
+                content: "Todo: ";
+            }
+        }
+
+        .warning {
+            color: #c00;
+            background-color: rgb(236, 207, 207);
+
+            &:before {
+                content: "⚠ ";
             }
         }
 

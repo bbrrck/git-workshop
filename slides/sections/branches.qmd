@@ -14,7 +14,7 @@
 * main
 ```
 
-::: {.fontsize-070}
+::: {.fontsize-080 .before-1em}
 V Gite je prednastavená hlavná vetva `master`. Tento názov sa v posledných rokoch [stal kontroverzným](https://sfconservancy.org/news/2020/jun/23/gitbranchname/) a postupne sa [prestáva používať](https://github.blog/changelog/2020-10-01-the-default-branch-for-newly-created-repositories-is-now-main/). Preto sme pri [nastavovaní Gitu](#/krok-2-nastavenie-gitu) zmenili `init.defaultBranch` na `main`.
 :::
 
@@ -110,9 +110,7 @@ Po vymazaní je vetva odstránená z histórie a nie je možné ju obnoviť.
 
 ## Príklad `git log` histórie
 
-::: {.todo}
-add mermaid diagram for this git log output
-:::
+{{< include ../diagrams/git-log-example.qmd >}}
 
 ```changelog
 *   3a5d22e (HEAD -> main) Merge branch 'french'
