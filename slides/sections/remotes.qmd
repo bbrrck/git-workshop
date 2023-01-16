@@ -75,7 +75,7 @@
 ## Nastavenie *remote* v lokálnom repozitári 
 
 - Na nastavenie vzdialeného repozitára použijeme príkaz `git remote add <name> <url>`:
-```sh
+```zsh
 git remote add origin https://github.com/bbrrck/zoo.git
 ```
 - `name` bude Git používať ako meno vzdialeného repozitára na adrese `url`. Meno môže byť ľubovoľné; bežne sa stretneme s menom `origin`.
@@ -85,11 +85,11 @@ git remote add origin https://github.com/bbrrck/zoo.git
 
 ## Poslanie lokálnej kópie na *remote*
 - Príkaz `git push <remote> <branch>` "natlačí" lokálne zmeny z vetvy `branch` do vzdialeného repozitára `remote`:
-```powershell
+```zsh
 git push origin main
 ```
 - Pri prvom zavolaní `git push` je potrebné pridať argument `-u`:
-```powershell
+```zsh
 git push -u origin main
 ```
 - `-u` alebo `--set-upstream` nastaví predvolenú *remote* vetvu (`origin/main`) pre aktuálnu lokálnu vetvu (`main`) 
@@ -97,8 +97,12 @@ git push -u origin main
 - ak *remote* vetva `origin/main` neexistuje, `git push` ju automaticky vytvorí
 
 ## Príklad výstupu z `git push`
-```js
->> git push -u origin main
+```zsh
+git push -u origin main
+```
+
+- Výstup:
+```zsh
 Enumerating objects: 3, done.
 Counting objects: 100% (3/3), done.
 Writing objects: 100% (3/3), 241 bytes | 120.00 KiB/s, done.
@@ -108,10 +112,11 @@ To https://github.com/bbrrck/test-repo-01.git
 branch 'main' set up to track 'origin/main'.
 ```
 
+
 ## Zoznam vetiev
 - `git branch -a` vypíše zoznam všetkých vetiev, lokálnych aj vzdialených
 - `-a` je skratka pre `--all`
-```sh
+```zsh
 git branch -a
 ```
 - Výstup --- `*` označuje aktuálnu vetvu:
@@ -122,17 +127,30 @@ git branch -a
 ```
 
 
+## Konflikt: *remote* zmeny neexistujú lokálne
+```zsh
+To https://github.com/bbrrck/zoo.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/bbrrck/zoo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+
 ## Stiahnutie *remote* zmien do lokálu
-- Pomocou príkazu `git fetch` stiahneme zoznam *remote* verzií:
-```sh
+- Pomocou príkazu `git fetch` stiahneme zoznam zmien z *remote* vetvy:
+```zsh
 git fetch
 ```
-- Zmeny ktoré nie sú súčasťou lokálneho repozitára zlúčime pomocou `git merge` (bez argumentov):
-```sh
-git merge
+- Zmeny ktoré nie sú súčasťou lokálnej vetvy zlúčime pomocou `git merge`:
+```zsh
+git merge # bez argumentov
 ```
-- Vo väčšine môžeme jednoducho zavolať príkaz `git pull`, ktorý je kombináciou `git fetch` a `git merge`:
-```sh
+- Vo väčšine prípadov môžeme jednoducho zavolať príkaz `git pull`, ktorý je kombináciou `git fetch` a `git merge`:
+```zsh
 git pull
 ```
 
@@ -142,6 +160,6 @@ git pull
 ::: {.todo}
 :::
 
-```powershell
+```zsh
 git clone https://github.com/bbrrck/animals.git
 ```
